@@ -1,0 +1,17 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header section {
+  border-bottom: lightgray solid 1px;
+}
+
+.header-top {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  width: 73px;
+}
