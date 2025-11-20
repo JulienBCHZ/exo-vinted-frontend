@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 /* PAGES */
 import Home from "./pages/Home";
-import Offer from "./pages/Offer";
+import Offer from "./pages/Offer/Offer";
 
 /* COMPOSANTS */
 import Header from "./components/Header/Header";
@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/offer" element={<Offer />} />
+          <Route path="/offer/:id" element={<Offer />} />
         </Routes>
       </Router>
     </>

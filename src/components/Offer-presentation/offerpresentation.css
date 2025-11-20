@@ -1,0 +1,11 @@
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product-image {
+  width: 450px;
+  height: 605px;
+  object-fit: cover;
+}

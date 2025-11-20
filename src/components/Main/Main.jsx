@@ -33,11 +33,7 @@ const Main = () => {
           </div>
         </section>
       </div>
-      <section className="offers-previews">
-        <Link to="/offer">
-          <button className="button">Go to offers !!!</button>
-        </Link>
-      </section>
+      {isLoading ? <div>Loading... Please wait !</div> : <Offers data={data} />}
     </main>
   );
 };
