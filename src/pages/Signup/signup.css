@@ -23,3 +23,18 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+.to-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-acount {
+  text-decoration: none;
+  background-color: white;
+  border: none;
+  color: #05b1ba;
+}
+.no-acount:hover {
+  cursor: pointer;
+}

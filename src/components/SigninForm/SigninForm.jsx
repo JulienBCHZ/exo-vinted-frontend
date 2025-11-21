@@ -17,7 +17,7 @@ const SigninForm = ({
     event.preventDefault();
     try {
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        "https://lereacteur-vinted-api.herokuapp.com/user/login",
         {
           email: email,
           password: password,
@@ -55,7 +55,6 @@ const SigninForm = ({
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
-
         <button className="submit-button">Se connecter</button>
       </form>
     </div>

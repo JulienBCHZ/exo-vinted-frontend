@@ -29,7 +29,9 @@ header section {
   color: #05b1ba;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.signup:hover {
+  cursor: pointer;
+}
 .signin {
   width: 115px;
   height: 30px;
@@ -39,6 +41,9 @@ header section {
   color: #05b1ba;
   font-family: Arial, Helvetica, sans-serif;
 }
+.signin:hover {
+  cursor: pointer;
+}
 .logout-button {
   width: 115px;
   height: 30px;
@@ -47,4 +52,7 @@ header section {
   border-radius: 5px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+}
+.logout-button:hover {
+  cursor: pointer;
 }

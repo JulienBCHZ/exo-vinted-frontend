@@ -1,6 +1,7 @@
 import "./signup.css";
 import { useState } from "react";
 import SignupForm from "../../components/SignupForm/SignupForm";
+import { Link } from "react-router-dom";
 
 const Signup = ({ token, setToken }) => {
   const [username, setUsername] = useState("");
@@ -8,6 +9,7 @@ const Signup = ({ token, setToken }) => {
   const [password, setPassword] = useState("");
   const [newsletter, setNewsletter] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+
   return (
     <main>
       <section className="signup-container">
@@ -29,6 +31,13 @@ const Signup = ({ token, setToken }) => {
             token={token}
             setToken={setToken}
           />
+        </div>
+        <div className="to-signin">
+          <Link to="/signin">
+            <button className="existing-acount">
+              Déjà un compte ? Connecte-toi !
+            </button>
+          </Link>
         </div>
       </section>
     </main>

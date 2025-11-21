@@ -2,6 +2,7 @@ import "./header.css";
 import logo from "../../assets/logo-vinted.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Header = ({ token, setToken }) => {
   const navigate = useNavigate();

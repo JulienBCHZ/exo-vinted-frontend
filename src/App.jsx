@@ -13,7 +13,8 @@ import Signin from "./pages/Signin/Signin";
 import Header from "./components/Header/Header";
 
 function App() {
-  const [token, setToken] = useState(null);
+  const [token, setToken] = useState(Cookies.get("userToken") || null);
+  // console.log("TOK", token);
   return (
     <>
       <Router>
