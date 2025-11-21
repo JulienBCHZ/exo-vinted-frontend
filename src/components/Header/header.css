@@ -39,3 +39,12 @@ header section {
   color: #05b1ba;
   font-family: Arial, Helvetica, sans-serif;
 }
+.logout-button {
+  width: 115px;
+  height: 30px;
+  background-color: red;
+  border: white solid 1px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}

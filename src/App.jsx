@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import Cookies from "js-cookie";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 /* PAGES */
@@ -12,15 +13,19 @@ import Signin from "./pages/Signin/Signin";
 import Header from "./components/Header/Header";
 
 function App() {
+  const [token, setToken] = useState(null);
   return (
     <>
       <Router>
-        <Header />
+        <Header token={token} setToken={setToken} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offer/:id" element={<Offer />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/signin" element={<Signin />} />
+          <Route
+            path="/signup"
+            element={<Signup token={token} setToken={setToken} />}
+          />
+          <Route path="/signin" element={<Signin setToken={setToken} />} />
         </Routes>
       </Router>
     </>

@@ -2,7 +2,7 @@ import "./signup.css";
 import { useState } from "react";
 import SignupForm from "../../components/SignupForm/SignupForm";
 
-const Signup = () => {
+const Signup = ({ token, setToken }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,7 @@ const Signup = () => {
     <main>
       <section className="signup-container">
         <div className="title">
-          <h2>S'inscrire</h2>
+          <h1>S'inscrire</h1>
         </div>
         <div>
           <SignupForm
@@ -26,6 +26,8 @@ const Signup = () => {
             setNewsletter={setNewsletter}
             errorMessage={errorMessage}
             setErrorMessage={setErrorMessage}
+            token={token}
+            setToken={setToken}
           />
         </div>
       </section>
