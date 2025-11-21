@@ -1,8 +1,10 @@
 import "./header.css";
 import logo from "../../assets/logo-vinted.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header>
       <section>
@@ -11,12 +13,28 @@ const Header = () => {
             <img src={logo} alt="Vinted logo" className="header-logo" />
           </Link>
           <div className="signup-signin">
-            <Link to="/signup">
+            <button
+              className="signup"
+              onClick={() => {
+                navigate("/signup");
+              }}
+            >
+              S'inscrire
+            </button>
+            <button
+              className="signin"
+              onClick={() => {
+                navigate("/signin");
+              }}
+            >
+              Se connecter
+            </button>
+            {/* <Link to="/signup">
               <button className="signup">S'inscrire</button>
             </Link>
             <Link to="/signin">
               <button className="signin">Se connecter</button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

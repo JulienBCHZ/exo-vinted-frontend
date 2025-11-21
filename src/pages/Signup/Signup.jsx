@@ -7,7 +7,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newsletter, setNewsletter] = useState(false);
-
+  const [errorMessage, setErrorMessage] = useState("");
   return (
     <main>
       <section className="signup-container">
@@ -24,6 +24,8 @@ const Signup = () => {
             setPassword={setPassword}
             newsletter={newsletter}
             setNewsletter={setNewsletter}
+            errorMessage={errorMessage}
+            setErrorMessage={setErrorMessage}
           />
         </div>
       </section>

@@ -1,0 +1,38 @@
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+.form-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.submit-button {
+  height: 45px;
+  background-color: #05b1ba;
+  /* margin-top: 30px; */
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 0 10px;
+}
+.checkbox span {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666666;
+}
+
+.form-vision p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 12px;
+}
+.newsletter-terms {
+  padding: 0 10px;
+}
