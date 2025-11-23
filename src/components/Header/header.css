@@ -4,7 +4,7 @@
   padding: 0 20px;
 }
 header section {
-  border-bottom: lightgray solid 1px;
+  border-bottom: #ecedee solid 1px;
 }
 
 .header-top {
@@ -55,4 +55,27 @@ header section {
 }
 .logout-button:hover {
   cursor: pointer;
+}
+
+.search-line {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  background-color: #ecedee;
+  border-radius: 3px;
+}
+header input {
+  height: 24px;
+  width: 600px;
+  border: none;
+  font-size: 16px;
+  background-color: #ecedee;
+}
+.search-logo {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
 }

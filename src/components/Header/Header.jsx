@@ -3,8 +3,9 @@ import logo from "../../assets/logo-vinted.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import { IoSearch } from "react-icons/io5";
 
-const Header = ({ token, setToken }) => {
+const Header = ({ token, setToken, search, setSearch }) => {
   const navigate = useNavigate();
   return (
     <header>
@@ -13,7 +14,26 @@ const Header = ({ token, setToken }) => {
           <Link to="/">
             <img src={logo} alt="Vinted logo" className="header-logo" />
           </Link>
-
+          <div className="search-line">
+            <div className="search-logo">
+              <IoSearch
+                onClick={() => {
+                  if (search) {
+                    return <Link to="/" />;
+                  }
+                }}
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Recherche des articles"
+              name="search"
+              value={search}
+              onChange={(event) => {
+                setSearch(event.target.value);
+              }}
+            />
+          </div>
           {token ? (
             <div className="logout">
               <button

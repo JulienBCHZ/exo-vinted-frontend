@@ -23,7 +23,7 @@ const OfferPresentation = () => {
   }, [id]);
 
   return (
-    <section className="offer-presentation-page container">
+    <section className="offer-container">
       {isLoading ? (
         <p>Loading... Please wait !</p>
       ) : (
@@ -43,38 +43,42 @@ const OfferPresentation = () => {
                     <>
                       {element["MARQUE"] && (
                         <div className="product-details">
-                          <p>MARQUE</p>
-                          <p>{element["MARQUE"]}</p>
+                          <p className="detail-type">MARQUE</p>
+                          <p className="detail-name">{element["MARQUE"]}</p>
                         </div>
                       )}
                       {element["TAILLE"] && (
                         <div className="product-details">
-                          <p>TAILLE</p>
-                          <p>{element["TAILLE"]}</p>
+                          <p className="detail-type">TAILLE</p>
+                          <p className="detail-name">{element["TAILLE"]}</p>
                         </div>
                       )}
                       {element["ÉTAT"] && (
                         <div className="product-details">
-                          <p>ÉTAT</p>
-                          <p>{element["ÉTAT"]}</p>
+                          <p className="detail-type">ÉTAT</p>
+                          <p className="detail-name">{element["ÉTAT"]}</p>
                         </div>
                       )}
                       {element["COULEUR"] && (
                         <div className="product-details">
-                          <p>COULEUR</p>
-                          <p>{element["COULEUR"]}</p>
+                          <p className="detail-type">COULEUR</p>
+                          <p className="detail-name">{element["COULEUR"]}</p>
                         </div>
                       )}
                       {element["EMPLACEMENT"] && (
                         <div className="product-details">
-                          <p>EMPLACEMENT</p>
-                          <p>{element["EMPLACEMENT"]}</p>
+                          <p className="detail-type">EMPLACEMENT</p>
+                          <p className="detail-name">
+                            {element["EMPLACEMENT"]}
+                          </p>
                         </div>
                       )}
                       {element["MODE DE PAIEMENT"] && (
                         <div className="product-details">
-                          <p>MODE DE PAIEMENT</p>
-                          <p>{element["MODE DE PAIEMENT"]}</p>
+                          <p className="detail-type">MODE DE PAIEMENT</p>
+                          <p className="detail-name">
+                            {element["MODE DE PAIEMENT"]}
+                          </p>
                         </div>
                       )}
                     </>

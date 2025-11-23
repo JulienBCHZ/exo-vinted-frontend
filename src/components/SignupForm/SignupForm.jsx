@@ -79,21 +79,25 @@ const SignupForm = ({
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
-        <div className="checkbox">
-          <input
-            type="checkbox"
-            checked={newsletter}
-            onChange={(event) => setNewsletter(event.target.checked)}
-          />
-          <span>S'inscrire à notre newsletter</span>
-        </div>
-        <div className="newsletter-terms">
-          <p>
-            En m'inscrivant je confirme avoir lu et accepté les Termes &
-            Conditions et Politique de Confidentialité de Vinted. Je confirme
-            avoir au moins 18 ans.
-          </p>
-        </div>
+        <section className="form-checkbox">
+          <div className="line-checkbox">
+            <input
+              type="checkbox"
+              checked={newsletter}
+              onChange={(event) => setNewsletter(event.target.checked)}
+              className="checkbox"
+            />
+            <span>S'inscrire à notre newsletter</span>
+          </div>
+          <div className="newsletter-terms">
+            <p>
+              En m'inscrivant je confirme avoir lu et accepté les Termes &
+              Conditions et Politique de Confidentialité de Vinted. Je confirme
+              avoir au moins 18 ans.
+            </p>
+          </div>
+        </section>
+
         <button className="submit-button">S'inscrire</button>
       </form>
     </div>

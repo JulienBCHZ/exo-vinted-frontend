@@ -14,11 +14,17 @@ import Header from "./components/Header/Header";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("userToken") || null);
+  const [search, setSearch] = useState("");
   // console.log("TOK", token);
   return (
     <>
       <Router>
-        <Header token={token} setToken={setToken} />
+        <Header
+          token={token}
+          setToken={setToken}
+          search={search}
+          setSearch={setSearch}
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offer/:id" element={<Offer />} />

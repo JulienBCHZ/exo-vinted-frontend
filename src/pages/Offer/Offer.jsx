@@ -3,7 +3,7 @@ import OfferPresentation from "../../components/Offer-presentation/OfferPresenta
 
 const Offer = () => {
   return (
-    <main>
+    <main className="main-offer">
       <OfferPresentation />
     </main>
   );
