@@ -29,7 +29,7 @@ const SigninForm = ({
         navigate("/");
         setErrorMessage("");
       } else {
-        setErrorMessage("Un problème est survenu...");
+        setErrorMessage("Vérifiez votre email ou votre mot de passe !");
       }
       //   console.log(response.data);
     } catch (error) {
@@ -55,6 +55,7 @@ const SigninForm = ({
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
+        {errorMessage && <p className="signin-error-message">{errorMessage}</p>}
         <button className="submit-button">Se connecter</button>
       </form>
     </div>

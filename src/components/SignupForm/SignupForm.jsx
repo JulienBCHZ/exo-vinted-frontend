@@ -41,7 +41,7 @@ const SignupForm = ({
         }
       );
       if (response.data.token) {
-        Cookies.set("userToken", response.data.token, { expires: 7 });
+        Cookies.set("userToken", response.data.token, { expires: 10 });
         setToken(response.data.token);
         navigate("/");
         setErrorMessage("");
@@ -55,6 +55,24 @@ const SignupForm = ({
         : console.log(error);
     }
   };
+
+  const handleChangeUsername = (event) => {
+    const value = event.target.value;
+    setUsername(value);
+  };
+  const handleChangeEmail = (event) => {
+    const value = event.target.value;
+    setEmail(value);
+  };
+  const handleChangePassword = (event) => {
+    const value = event.target.value;
+    setPassword(value);
+  };
+  const handleCheckNewsletter = (event) => {
+    const value = event.target.checked;
+    setNewsletter(value);
+  };
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form-vision">
@@ -63,28 +81,29 @@ const SignupForm = ({
           placeholder="Username"
           name="username"
           value={username}
-          onChange={(event) => setUsername(event.target.value)}
+          onChange={handleChangeUsername}
         />
         <input
           type="email"
           placeholder="Email"
           name="email"
           value={email}
-          onChange={(event) => setEmail(event.target.value)}
+          onChange={handleChangeEmail}
         />
         <input
           type="password"
           placeholder="Password"
           name="password"
           value={password}
-          onChange={(event) => setPassword(event.target.value)}
+          onChange={handleChangePassword}
         />
+        {errorMessage && <p className="signup-error-message">{errorMessage}</p>}
         <section className="form-checkbox">
           <div className="line-checkbox">
             <input
               type="checkbox"
               checked={newsletter}
-              onChange={(event) => setNewsletter(event.target.checked)}
+              onChange={handleCheckNewsletter}
               className="checkbox"
             />
             <span>S'inscrire à notre newsletter</span>

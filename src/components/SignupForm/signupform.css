@@ -52,3 +52,9 @@ input {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 16px;
 }
+.signup-error-message {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: red;
+}

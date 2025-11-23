@@ -26,7 +26,10 @@ function App() {
           setSearch={setSearch}
         />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home search={search} setSearch={setSearch} />}
+          />
           <Route path="/offer/:id" element={<Offer />} />
           <Route
             path="/signup"

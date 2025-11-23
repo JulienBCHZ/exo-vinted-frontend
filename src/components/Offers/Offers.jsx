@@ -2,100 +2,114 @@ import "./offers.css";
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 
-const Offers = ({ data }) => {
+const Offers = ({ data, search }) => {
   const getUserToken = Cookies.get("userToken");
   console.log("TOKEN:", getUserToken);
   const { count, offers } = data;
   //   console.log("TAB :", offers);
+  console.log("SEAR :", search);
 
   return (
     <section className="offers-previews container">
-      {offers.map((offer) => {
-        return (
-          <div key={offer._id} className="offer">
-            {getUserToken ? (
-              <>
-                <Link style={{ textDecoration: "none", color: "lightgrey" }}>
-                  <div className="username">
-                    <img
-                      src={offer.owner.account.avatar.secure_url}
-                      alt="user avatar"
-                    />
-                    <span>{offer.owner.account.username}</span>
-                  </div>
-                </Link>
-                <Link
-                  to={`/offer/${offer._id}`}
-                  style={{ textDecoration: "none", color: "lightgrey" }}
-                >
-                  <div className="preview">
-                    <img
-                      alt="preview offer"
-                      src={offer.product_image.secure_url}
-                    />
-                    <div className="preview-details">
-                      <p className="offer-price">
-                        {offer.product_price.toFixed(2).split(".").join(",")} €
-                      </p>
-                      {offer.product_details.map((element) => {
-                        return (
-                          <>{element["TAILLE"] && <p>{element["TAILLE"]}</p>}</>
-                        );
-                      })}
-                      {offer.product_details.map((element) => {
-                        return (
-                          <>{element["MARQUE"] && <p>{element["MARQUE"]}</p>}</>
-                        );
-                      })}
+      {offers
+        .filter((offer) => offer.product_description.includes(search))
+        // .filter((offer) => offer.product_name.includes(search))
+        .map((offer) => {
+          return (
+            <div key={offer._id} className="offer">
+              {getUserToken ? (
+                <>
+                  <Link style={{ textDecoration: "none", color: "lightgrey" }}>
+                    <div className="username">
+                      <img
+                        src={offer.owner.account.avatar.secure_url}
+                        alt="user avatar"
+                      />
+                      <span>{offer.owner.account.username}</span>
                     </div>
-                  </div>
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link
-                  to="/signin"
-                  style={{ textDecoration: "none", color: "lightgrey" }}
-                >
-                  <div className="username">
-                    <img
-                      src={offer.owner.account.avatar.secure_url}
-                      alt="user avatar"
-                    />
-                    <span>{offer.owner.account.username}</span>
-                  </div>
-                </Link>
-                <Link
-                  to="/signin"
-                  style={{ textDecoration: "none", color: "lightgrey" }}
-                >
-                  <div className="preview">
-                    <img
-                      alt="preview offer"
-                      src={offer.product_image.secure_url}
-                    />
-                    <div className="preview-details">
-                      <p className="offer-price">
-                        {offer.product_price.toFixed(2).split(".").join(",")} €
-                      </p>
-                      {offer.product_details.map((element) => {
-                        return (
-                          <>{element["TAILLE"] && <p>{element["TAILLE"]}</p>}</>
-                        );
-                      })}
-                      {offer.product_details.map((element) => {
-                        return (
-                          <>{element["MARQUE"] && <p>{element["MARQUE"]}</p>}</>
-                        );
-                      })}
+                  </Link>
+                  <Link
+                    to={`/offer/${offer._id}`}
+                    style={{ textDecoration: "none", color: "lightgrey" }}
+                  >
+                    <div className="preview">
+                      <img
+                        alt="preview offer"
+                        src={offer.product_image.secure_url}
+                      />
+                      <div className="preview-details">
+                        <p className="offer-price">
+                          {offer.product_price.toFixed(2).split(".").join(",")}{" "}
+                          €
+                        </p>
+                        {offer.product_details.map((element) => {
+                          return (
+                            <>
+                              {element["TAILLE"] && <p>{element["TAILLE"]}</p>}
+                            </>
+                          );
+                        })}
+                        {offer.product_details.map((element) => {
+                          return (
+                            <>
+                              {element["MARQUE"] && <p>{element["MARQUE"]}</p>}
+                            </>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </>
-            )}
-          </div>
-        );
-      })}
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/signin"
+                    style={{ textDecoration: "none", color: "lightgrey" }}
+                  >
+                    <div className="username">
+                      <img
+                        src={offer.owner.account.avatar.secure_url}
+                        alt="user avatar"
+                      />
+                      <span>{offer.owner.account.username}</span>
+                    </div>
+                  </Link>
+                  <Link
+                    to="/signin"
+                    style={{ textDecoration: "none", color: "lightgrey" }}
+                  >
+                    <div className="preview">
+                      <img
+                        alt="preview offer"
+                        src={offer.product_image.secure_url}
+                      />
+                      <div className="preview-details">
+                        <p className="offer-price">
+                          {offer.product_price.toFixed(2).split(".").join(",")}{" "}
+                          €
+                        </p>
+                        {offer.product_details.map((element) => {
+                          return (
+                            <>
+                              {element["TAILLE"] && <p>{element["TAILLE"]}</p>}
+                            </>
+                          );
+                        })}
+                        {offer.product_details.map((element) => {
+                          return (
+                            <>
+                              {element["MARQUE"] && <p>{element["MARQUE"]}</p>}
+                            </>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </Link>
+                </>
+              )}
+            </div>
+          );
+        })}
     </section>
   );
 };

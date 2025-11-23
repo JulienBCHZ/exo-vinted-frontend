@@ -5,8 +5,9 @@ import heroPicture from "../../assets/hero-picture.jpg";
 import "./main.css";
 
 import Offers from "../Offers/Offers";
-
-const Main = () => {
+// search={search} setSearch={setSearch}
+const Main = ({ search, setSearch }) => {
+  // console.log("SEAR :", search);
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
 
@@ -33,7 +34,11 @@ const Main = () => {
           </div>
         </section>
       </div>
-      {isLoading ? <div>Loading... Please wait !</div> : <Offers data={data} />}
+      {isLoading ? (
+        <div>Loading... Please wait !</div>
+      ) : (
+        <Offers data={data} search={search} />
+      )}
     </main>
   );
 };

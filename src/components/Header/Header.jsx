@@ -7,6 +7,11 @@ import { IoSearch } from "react-icons/io5";
 
 const Header = ({ token, setToken, search, setSearch }) => {
   const navigate = useNavigate();
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearch(value);
+  };
+
   return (
     <header>
       <section>
@@ -15,23 +20,22 @@ const Header = ({ token, setToken, search, setSearch }) => {
             <img src={logo} alt="Vinted logo" className="header-logo" />
           </Link>
           <div className="search-line">
-            <div className="search-logo">
-              <IoSearch
-                onClick={() => {
-                  if (search) {
-                    return <Link to="/" />;
-                  }
-                }}
-              />
+            <div
+            // className="search-logo"
+            // onClick={() => {
+            //   if (search) {
+            //     return <Link to="/" />;
+            //   }
+            // }}
+            >
+              <IoSearch />
             </div>
             <input
               type="text"
-              placeholder="Recherche des articles"
+              placeholder="Rechercher des articles"
               name="search"
               value={search}
-              onChange={(event) => {
-                setSearch(event.target.value);
-              }}
+              onChange={handleSearch}
             />
           </div>
           {token ? (
