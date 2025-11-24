@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Offer from "./pages/Offer/Offer";
 import Signup from "./pages/Signup/Signup";
 import Signin from "./pages/Signin/Signin";
+import Publish from "./pages/Publish/Publish";
 
 /* COMPOSANTS */
 import Header from "./components/Header/Header";
@@ -19,12 +20,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header
-          token={token}
-          setToken={setToken}
-          search={search}
-          setSearch={setSearch}
-        />
+        <Header setToken={setToken} search={search} setSearch={setSearch} />
         <Routes>
           <Route
             path="/"
@@ -36,6 +32,7 @@ function App() {
             element={<Signup token={token} setToken={setToken} />}
           />
           <Route path="/signin" element={<Signin setToken={setToken} />} />
+          <Route path="/publish" element={<Publish />} />
         </Routes>
       </Router>
     </>

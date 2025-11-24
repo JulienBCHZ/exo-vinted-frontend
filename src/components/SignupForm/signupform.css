@@ -12,6 +12,7 @@ input {
   height: 50px;
   border: none;
   border-bottom: pink solid;
+  outline: none;
 }
 .submit-button {
   height: 45px;

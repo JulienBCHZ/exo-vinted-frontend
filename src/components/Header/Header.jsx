@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import { IoSearch } from "react-icons/io5";
 
-const Header = ({ token, setToken, search, setSearch }) => {
+const Header = ({ setToken, search, setSearch }) => {
+  const getUserToken = Cookies.get("userToken");
   const navigate = useNavigate();
   const handleSearch = (event) => {
     const value = event.target.value;
@@ -31,7 +32,7 @@ const Header = ({ token, setToken, search, setSearch }) => {
               onChange={handleSearch}
             />
           </div>
-          {token ? (
+          {getUserToken ? (
             <div className="logout">
               <button
                 className="logout-button"
@@ -70,6 +71,9 @@ const Header = ({ token, setToken, search, setSearch }) => {
             </Link> */}
             </div>
           )}
+          <Link to={getUserToken ? "/publish" : "/signin"}>
+            <button className="selling-button">Vends tes articles</button>
+          </Link>
         </div>
       </section>
     </header>
