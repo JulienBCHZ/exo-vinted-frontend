@@ -89,3 +89,22 @@
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.publish-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.publish-form-top {
+  background-color: white;
+}
+.publish-form-middle-top {
+  background-color: white;
+}
+.publish-middle-bottom {
+  background-color: white;
+}
+.publish-form-bottom {
+  background-color: white;
+}

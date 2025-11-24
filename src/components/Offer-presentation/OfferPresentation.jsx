@@ -9,7 +9,6 @@ const OfferPresentation = () => {
 
   const params = useParams();
   const { id } = params;
-  // https://lereacteur-vinted-api.herokuapp.com/v2/offers
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
@@ -28,7 +27,7 @@ const OfferPresentation = () => {
         <p>Loading... Please wait !</p>
       ) : (
         <>
-          {offerData.product_image.secure_url ? (
+          {offerData.product_image ? (
             <img
               src={offerData.product_image.secure_url}
               alt="product image"

@@ -86,8 +86,8 @@ const PublishForm = ({
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <section>
+    <form onSubmit={handleSubmit} className="publish-form-section">
+      <section className="publish-form-top">
         <div className="picture-input-design">
           <label htmlFor="picture" className="file-label">
             Ajouter une photo
@@ -101,7 +101,7 @@ const PublishForm = ({
           />
         </div>
       </section>
-      <section>
+      <section className="publish-form-middle-top">
         <div className="title-line">
           <h2>Titre</h2>
           <input
@@ -127,7 +127,7 @@ const PublishForm = ({
           />
         </div>
       </section>
-      <section>
+      <section className="publish-middle-bottom">
         <div className="brand-line">
           <h2>Marque</h2>
           <input
@@ -189,7 +189,7 @@ const PublishForm = ({
           />
         </div>
       </section>
-      <section>
+      <section className="publish-form-bottom">
         <div className="price-line">
           <h2>Prix</h2>
           <input

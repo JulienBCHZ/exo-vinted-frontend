@@ -18,10 +18,14 @@ const Offers = ({ data }) => {
               <>
                 <Link style={{ textDecoration: "none", color: "lightgrey" }}>
                   <div className="username">
-                    <img
-                      // src={offer.owner.account.avatar.secure_url}
-                      alt="user avatar"
-                    />
+                    {offer.owner.account.avatar ? (
+                      <img
+                        src={offer.owner.account.avatar.secure_url}
+                        alt="user avatar"
+                      />
+                    ) : (
+                      <img alt="user avatar" />
+                    )}
                     <span>{offer.owner.account.username}</span>
                   </div>
                 </Link>
@@ -59,10 +63,14 @@ const Offers = ({ data }) => {
                   style={{ textDecoration: "none", color: "lightgrey" }}
                 >
                   <div className="username">
-                    <img
-                      src={offer.owner.account.avatar.secure_url}
-                      alt="user avatar"
-                    />
+                    {offer.owner.account.avatar ? (
+                      <img
+                        src={offer.owner.account.avatar.secure_url}
+                        alt="user avatar"
+                      />
+                    ) : (
+                      <img alt="user avatar" />
+                    )}
                     <span>{offer.owner.account.username}</span>
                   </div>
                 </Link>
