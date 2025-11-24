@@ -1,0 +1,91 @@
+.title-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-line > input {
+  width: 600px;
+}
+
+.description-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.description-line > input {
+  width: 600px;
+}
+
+.brand-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand-line > input {
+  width: 600px;
+}
+
+.size-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.size-line > input {
+  width: 600px;
+}
+
+.color-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.color-line > input {
+  width: 600px;
+}
+
+.condition-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.condition-line > input {
+  width: 600px;
+}
+
+.city-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.city-line > input {
+  width: 600px;
+}
+
+.price-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price-line > input {
+  width: 600px;
+}
+
+.exchange-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.create-offer {
+  display: flex;
+  justify-content: flex-end;
+}
+.create-offer-button {
+  width: 100px;
+  height: 30px;
+  background-color: #05b1ba;
+  border: white solid 1px;
+  border-radius: 5px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}

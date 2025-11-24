@@ -9,7 +9,7 @@ const OfferPresentation = () => {
 
   const params = useParams();
   const { id } = params;
-
+  // https://lereacteur-vinted-api.herokuapp.com/v2/offers
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
@@ -28,10 +28,19 @@ const OfferPresentation = () => {
         <p>Loading... Please wait !</p>
       ) : (
         <>
-          <img
-            src={offerData.product_image.secure_url}
-            className="product-image"
-          />
+          {offerData.product_image.secure_url ? (
+            <img
+              src={offerData.product_image.secure_url}
+              alt="product image"
+              className="product-image"
+            />
+          ) : (
+            <img
+              // src={offerData.product_image.secure_url}
+              alt="product image"
+              className="product-image"
+            />
+          )}
           <section className="product-presentation">
             <div className="details-top">
               <p className="product-price">
@@ -90,10 +99,15 @@ const OfferPresentation = () => {
               <h3>{offerData.product_name}</h3>
               <p>{offerData.product_description}</p>
               <div className="user">
-                <img
-                  src={offerData.owner.account.avatar.secure_url}
-                  className="user-avatar"
-                />
+                {offerData.owner.account.avatar ? (
+                  <img
+                    src={offerData.owner.account.avatar.secure_url}
+                    alt="avatar"
+                    className="user-avatar"
+                  />
+                ) : (
+                  <img alt="avatar" className="user-avatar" />
+                )}
                 <span>{offerData.owner.account.username}</span>
               </div>
             </div>
