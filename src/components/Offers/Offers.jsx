@@ -7,13 +7,12 @@ const Offers = ({ data, search }) => {
   console.log("TOKEN:", getUserToken);
   const { count, offers } = data;
   //   console.log("TAB :", offers);
-  console.log("SEAR :", search);
+  // console.log("SEAR :", search);
 
   return (
     <section className="offers-previews container">
       {offers
-        .filter((offer) => offer.product_description.includes(search))
-        // .filter((offer) => offer.product_name.includes(search))
+        // .filter((offer) => offer.product_description.includes(search))
         .map((offer) => {
           return (
             <div key={offer._id} className="offer">

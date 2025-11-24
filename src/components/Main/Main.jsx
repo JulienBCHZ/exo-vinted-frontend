@@ -14,14 +14,14 @@ const Main = ({ search, setSearch }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://lereacteur-vinted-api.herokuapp.com/offers"
+        `https://lereacteur-vinted-api.herokuapp.com/v2/offers?title=${search}`
       );
       console.log("RES :", response.data);
       setData(response.data);
       setIsLoading(false);
     };
     fetchData();
-  }, []);
+  }, [search]);
 
   return (
     <main>

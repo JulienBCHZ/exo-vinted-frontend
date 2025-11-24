@@ -20,14 +20,7 @@ const Header = ({ token, setToken, search, setSearch }) => {
             <img src={logo} alt="Vinted logo" className="header-logo" />
           </Link>
           <div className="search-line">
-            <div
-            // className="search-logo"
-            // onClick={() => {
-            //   if (search) {
-            //     return <Link to="/" />;
-            //   }
-            // }}
-            >
+            <div className="search-logo">
               <IoSearch />
             </div>
             <input
