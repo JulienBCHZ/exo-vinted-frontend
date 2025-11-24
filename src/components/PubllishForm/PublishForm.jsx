@@ -70,7 +70,6 @@ const PublishForm = ({
         {
           headers: {
             authorization: `Bearer ${getUserToken}`,
-            "Content-Type": "multipart/form-data",
           },
         }
       );
