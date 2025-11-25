@@ -1,5 +1,6 @@
 import "./offerpresentation.css";
-import { useParams } from "react-router-dom";
+
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -110,7 +111,16 @@ const OfferPresentation = () => {
                 <span>{offerData.owner.account.username}</span>
               </div>
             </div>
-            <button className="buy">ACHETER</button>
+            <Link
+              to="/payment"
+              state={{
+                title: offerData.product_name,
+                price: offerData.product_price,
+              }}
+            >
+              <button className="buy">ACHETER</button>
+            </Link>
+            {/* <button className="buy">ACHETER</button> */}
           </section>
         </>
       )}

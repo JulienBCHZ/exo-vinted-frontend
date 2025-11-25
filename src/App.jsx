@@ -9,6 +9,7 @@ import Offer from "./pages/Offer/Offer";
 import Signup from "./pages/Signup/Signup";
 import Signin from "./pages/Signin/Signin";
 import Publish from "./pages/Publish/Publish";
+import Payment from "./pages/Payment/Payment";
 
 /* COMPOSANTS */
 import Header from "./components/Header/Header";
@@ -33,6 +34,7 @@ function App() {
           />
           <Route path="/signin" element={<Signin setToken={setToken} />} />
           <Route path="/publish" element={<Publish />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
       </Router>
     </>

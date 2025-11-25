@@ -1,6 +1,9 @@
 import "./publish.css";
-import { useState } from "react";
 import PublishForm from "../../components/PubllishForm/PublishForm";
+
+import { useState } from "react";
+import Cookies from "js-cookie";
+import { Navigate } from "react-router-dom";
 
 const Publish = () => {
   const [picture, setPicture] = useState(null);
@@ -14,7 +17,9 @@ const Publish = () => {
   const [color, setColor] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  return (
+  const getUserToken = Cookies.get("userToken");
+
+  return getUserToken ? (
     <main className="main-publish">
       <div className="publish-container">
         <h1>Vends ton article</h1>
@@ -44,6 +49,8 @@ const Publish = () => {
         </section>
       </div>
     </main>
+  ) : (
+    <Navigate to="/signin" state={{ from: "/publish" }} />
   );
 };
 

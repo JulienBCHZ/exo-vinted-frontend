@@ -102,7 +102,7 @@ const PublishForm = ({
       </section>
       <section className="publish-form-middle-top">
         <div className="title-line">
-          <h2>Titre</h2>
+          <label htmlFor="title">Titre</label>
           <input
             type="text"
             placeholder="Title"
@@ -114,7 +114,7 @@ const PublishForm = ({
           />
         </div>
         <div className="description-line">
-          <h2>Décris ton article</h2>
+          <label htmlFor="description">Décris ton article</label>
           <input
             type="text"
             placeholder="Description"
@@ -128,7 +128,7 @@ const PublishForm = ({
       </section>
       <section className="publish-middle-bottom">
         <div className="brand-line">
-          <h2>Marque</h2>
+          <label htmlFor="brand">Marque</label>
           <input
             type="text"
             placeholder="Marque"
@@ -140,7 +140,7 @@ const PublishForm = ({
           />
         </div>
         <div className="size-line">
-          <h2>Taille</h2>
+          <label htmlFor="title">Taille</label>
           <input
             type="text"
             placeholder="Taille"
@@ -152,7 +152,7 @@ const PublishForm = ({
           />
         </div>
         <div className="color-line">
-          <h2>Couleur</h2>
+          <label htmlFor="color">Couleur</label>
           <input
             type="text"
             placeholder="Couleur"
@@ -164,11 +164,11 @@ const PublishForm = ({
           />
         </div>
         <div className="condition-line">
-          <h2>Etat</h2>
+          <label htmlFor="condition">Etat</label>
           <input
             type="text"
             placeholder="Etat"
-            name="Condition"
+            name="condition"
             value={condition}
             onChange={(event) => {
               setCondition(event.target.value);
@@ -176,11 +176,11 @@ const PublishForm = ({
           />
         </div>
         <div className="city-line">
-          <h2>Lieu</h2>
+          <label htmlFor="city">Lieu</label>
           <input
             type="text"
             placeholder="Lieu"
-            name="City"
+            name="city"
             value={city}
             onChange={(event) => {
               setCity(event.target.value);
@@ -190,11 +190,11 @@ const PublishForm = ({
       </section>
       <section className="publish-form-bottom">
         <div className="price-line">
-          <h2>Prix</h2>
+          <label htmlFor="price">Prix</label>
           <input
             type="text"
             placeholder="Prix"
-            name="Price"
+            name="price"
             value={price}
             onChange={(event) => {
               setPrice(event.target.value);

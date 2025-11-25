@@ -1,73 +1,126 @@
 .title-line {
+  height: 60px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: #ecedee solid 1px;
 }
 .title-line > input {
   width: 600px;
+  height: 30px;
+  order: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .description-line {
+  height: 100px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .description-line > input {
   width: 600px;
+  height: 70px;
+  border: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .brand-line {
+  height: 60px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: #ecedee solid 1px;
 }
 .brand-line > input {
   width: 600px;
+  height: 30px;
+  order: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .size-line {
+  height: 60px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: #ecedee solid 1px;
 }
 .size-line > input {
   width: 600px;
+  height: 30px;
+  order: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .color-line {
+  height: 60px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: #ecedee solid 1px;
 }
 .color-line > input {
   width: 600px;
+  height: 30px;
+  order: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .condition-line {
+  height: 60px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: #ecedee solid 1px;
 }
 .condition-line > input {
   width: 600px;
+  height: 30px;
+  order: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .city-line {
+  height: 60px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .city-line > input {
   width: 600px;
+  height: 30px;
+  order: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .price-line {
+  height: 60px;
+  padding: 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .price-line > input {
   width: 600px;
+  height: 30px;
+  order: none;
+  border-bottom: #ecedee solid;
+  outline: none;
 }
 
 .exchange-checkbox {

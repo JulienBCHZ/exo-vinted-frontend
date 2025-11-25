@@ -63,15 +63,10 @@ const Header = ({ setToken, search, setSearch }) => {
               >
                 Se connecter
               </button>
-              {/* <Link to="/signup">
-              <button className="signup">S'inscrire</button>
-            </Link>
-            <Link to="/signin">
-              <button className="signin">Se connecter</button>
-            </Link> */}
             </div>
           )}
-          <Link to={getUserToken ? "/publish" : "/signin"}>
+          {/* {getUserToken ? "/publish" : "/signin"} */}
+          <Link to="/publish">
             <button className="selling-button">Vends tes articles</button>
           </Link>
         </div>
