@@ -8,3 +8,7 @@
   margin: 0 auto;
   padding: 30px 40px;
 }
+
+.payment-resume {
+  display: flex;
+}
