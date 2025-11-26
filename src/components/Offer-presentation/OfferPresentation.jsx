@@ -51,31 +51,31 @@ const OfferPresentation = () => {
                   return (
                     <>
                       {element["MARQUE"] && (
-                        <div className="product-details">
+                        <div className="product-details" key={index}>
                           <p className="detail-type">MARQUE</p>
                           <p className="detail-name">{element["MARQUE"]}</p>
                         </div>
                       )}
                       {element["TAILLE"] && (
-                        <div className="product-details">
+                        <div className="product-details" key={index}>
                           <p className="detail-type">TAILLE</p>
                           <p className="detail-name">{element["TAILLE"]}</p>
                         </div>
                       )}
                       {element["ÉTAT"] && (
-                        <div className="product-details">
+                        <div className="product-details" key={index}>
                           <p className="detail-type">ÉTAT</p>
                           <p className="detail-name">{element["ÉTAT"]}</p>
                         </div>
                       )}
                       {element["COULEUR"] && (
-                        <div className="product-details">
+                        <div className="product-details" key={index}>
                           <p className="detail-type">COULEUR</p>
                           <p className="detail-name">{element["COULEUR"]}</p>
                         </div>
                       )}
                       {element["EMPLACEMENT"] && (
-                        <div className="product-details">
+                        <div className="product-details" key={index}>
                           <p className="detail-type">EMPLACEMENT</p>
                           <p className="detail-name">
                             {element["EMPLACEMENT"]}
@@ -83,7 +83,7 @@ const OfferPresentation = () => {
                         </div>
                       )}
                       {element["MODE DE PAIEMENT"] && (
-                        <div className="product-details">
+                        <div className="product-details" key={index}>
                           <p className="detail-type">MODE DE PAIEMENT</p>
                           <p className="detail-name">
                             {element["MODE DE PAIEMENT"]}

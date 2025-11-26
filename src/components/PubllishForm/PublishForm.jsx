@@ -1,4 +1,6 @@
 import "./publishform.css";
+import { FaPlus } from "react-icons/fa";
+
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
@@ -89,6 +91,7 @@ const PublishForm = ({
       <section className="publish-form-top">
         <div className="picture-input-design">
           <label htmlFor="picture" className="file-label">
+            <FaPlus />
             Ajouter une photo
           </label>
           <input

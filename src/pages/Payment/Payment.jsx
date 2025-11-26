@@ -29,42 +29,41 @@ const Payment = ({ stripePromise }) => {
 
   return getUserToken ? (
     <main className="main-payment">
-      <section className="payment-container">
-        <div>
+      <div className="payment-container">
+        <section className="order-resume">
           <p>Résumé de la commande</p>
-          <div>
+          <div className="order-price">
             <span>Commande</span>
-            <span>{`${price} €`}</span>
+            <span>{`${price.toFixed(2)} €`}</span>
           </div>
-          <div>
+          <div className="order-price">
             <span>Frais protection acheteur</span>
-            <span>{`${insurancePrice} €`}</span>
+            <span>{`${insurancePrice.toFixed(2)} €`}</span>
           </div>
-          <div>
-            <p>Frais de port</p>
+          <div className="order-price">
             <span>Frais de port</span>
-            <span>{`${deliveryPrice} €`}</span>
+            <span>{`${deliveryPrice.toFixed(2)} €`}</span>
           </div>
-        </div>
-        <div>
-          <div>
+        </section>
+        <section className="order-total">
+          <div className="total-price">
             <span>Total</span>
             <span>{`${totalPrice} €`}</span>
           </div>
-          <div className="payment-resume">
+          <div className="payment-last-step">
             <p>Il ne vous reste plus qu'une étape pour vous offrir </p>
             <span>{title}</span>
             <p>. Vous allez payer </p>
-            <span>{totalPrice}</span>
+            <span>{totalPrice.toFixed(2)}</span>
             <p> (frais de protection et frais de port inclus)</p>
           </div>
-        </div>
-        <div>
+        </section>
+        <section>
           <Elements stripe={stripePromise} options={options}>
             <CheckoutForm title={title} totalPrice={totalPrice} />
           </Elements>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   ) : (
     <Navigate to="/signin" state={{ from: "/payment" }} />

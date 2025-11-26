@@ -4,11 +4,52 @@
 }
 
 .payment-container {
-  width: 500px;
+  border-radius: 3px;
+  width: 700px;
   margin: 0 auto;
-  padding: 30px 40px;
+  padding: 50px 40px;
 }
 
-.payment-resume {
+.order-resume {
+  background-color: white;
+  height: 220px;
+  border-radius: 3px;
+  padding: 20px;
   display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: #ecedee solid 2px;
+}
+.order-resume > p {
+  font-size: 16px;
+  color: lightgray;
+  margin-bottom: 30px;
+}
+.order-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-total {
+  background-color: white;
+  height: 220px;
+  border-radius: 3px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.total-price {
+  /* margin: 30px 0; */
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.payment-last-step {
+  display: flex;
+  border-bottom: #ecedee solid 2px;
 }

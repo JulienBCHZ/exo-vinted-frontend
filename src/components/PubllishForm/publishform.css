@@ -1,3 +1,55 @@
+.publish-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.publish-form-top {
+  height: 180px;
+  background-color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.publish-form-middle-top {
+  background-color: white;
+  border-radius: 3px;
+}
+.publish-middle-bottom {
+  background-color: white;
+  border-radius: 3px;
+}
+.publish-form-bottom {
+  background-color: white;
+  border-radius: 3px;
+}
+
+.picture-input-design {
+  width: 200px;
+  height: 50px;
+  border: #05b1ba solid 3px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #05b1ba;
+}
+.picture-input-design input {
+  display: none;
+}
+.file-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.file-label:hover {
+  cursor: pointer;
+}
+
 .title-line {
   height: 60px;
   padding: 10px 15px;
@@ -5,6 +57,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: #ecedee solid 1px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .title-line > input {
   width: 600px;
@@ -20,6 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .description-line > input {
   width: 600px;
@@ -36,6 +90,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: #ecedee solid 1px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .brand-line > input {
   width: 600px;
@@ -52,6 +107,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: #ecedee solid 1px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .size-line > input {
   width: 600px;
@@ -68,6 +124,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: #ecedee solid 1px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .color-line > input {
   width: 600px;
@@ -84,6 +141,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: #ecedee solid 1px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .condition-line > input {
   width: 600px;
@@ -99,6 +157,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .city-line > input {
   width: 600px;
@@ -114,6 +173,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .price-line > input {
   width: 600px;
@@ -124,14 +184,19 @@
 }
 
 .exchange-checkbox {
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 15px;
+  gap: 3px;
 }
 
 .create-offer {
   display: flex;
   justify-content: flex-end;
+  margin-top: 10px;
 }
 .create-offer-button {
   width: 100px;
@@ -141,23 +206,4 @@
   border-radius: 5px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.publish-form-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.publish-form-top {
-  background-color: white;
-}
-.publish-form-middle-top {
-  background-color: white;
-}
-.publish-middle-bottom {
-  background-color: white;
-}
-.publish-form-bottom {
-  background-color: white;
 }
