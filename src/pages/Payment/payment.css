@@ -7,23 +7,24 @@
   border-radius: 3px;
   width: 700px;
   margin: 0 auto;
-  padding: 50px 40px;
+  padding: 50px 0;
 }
 
 .order-resume {
   background-color: white;
-  height: 220px;
-  border-radius: 3px;
-  padding: 20px;
+  height: 230px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: 20px 30px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   font-family: Arial, Helvetica, sans-serif;
   border-bottom: #ecedee solid 2px;
 }
 .order-resume > p {
   font-size: 16px;
-  color: lightgray;
+  color: rgb(166, 165, 165);
   margin-bottom: 30px;
 }
 .order-price {
@@ -33,12 +34,13 @@
 
 .order-total {
   background-color: white;
-  height: 220px;
-  border-radius: 3px;
-  padding: 40px 20px;
+  height: 230px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 80px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -52,4 +54,27 @@
 .payment-last-step {
   display: flex;
   border-bottom: #ecedee solid 2px;
+  padding-bottom: 25px;
+  text-align: justify;
+}
+.payment-last-step p {
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(166, 165, 165);
+}
+.payment-last-step span {
+  font-weight: bold;
+  font-size: 17px;
+  color: #017782;
+}
+
+.order-payment-method {
+  background-color: white;
+  min-height: 240px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
 }

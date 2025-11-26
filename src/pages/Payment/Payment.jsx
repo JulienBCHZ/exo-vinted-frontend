@@ -48,17 +48,18 @@ const Payment = ({ stripePromise }) => {
         <section className="order-total">
           <div className="total-price">
             <span>Total</span>
-            <span>{`${totalPrice} €`}</span>
+            <span>{`${totalPrice.toFixed(2)} €`}</span>
           </div>
           <div className="payment-last-step">
-            <p>Il ne vous reste plus qu'une étape pour vous offrir </p>
-            <span>{title}</span>
-            <p>. Vous allez payer </p>
-            <span>{totalPrice.toFixed(2)}</span>
-            <p> (frais de protection et frais de port inclus)</p>
+            <p>
+              Il ne vous reste plus qu'une étape pour vous offrir
+              <span> {title}</span>. Vous allez payer
+              <span> {totalPrice.toFixed(2)} €</span> (frais de protection et
+              frais de port inclus).
+            </p>
           </div>
         </section>
-        <section>
+        <section className="order-payment-method">
           <Elements stripe={stripePromise} options={options}>
             <CheckoutForm title={title} totalPrice={totalPrice} />
           </Elements>

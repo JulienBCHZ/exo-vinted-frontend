@@ -1,3 +1,5 @@
+import "./checkoutform.css";
+
 import {
   PaymentElement,
   useStripe,
@@ -6,7 +8,6 @@ import {
 import { useState } from "react";
 import axios from "axios";
 
-// title={title} totalPrice={totalPrice}
 const CheckoutForm = ({ title, totalPrice }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -50,7 +51,7 @@ const CheckoutForm = ({ title, totalPrice }) => {
           // Titre et montant de l'annonce
         }
       );
-      console.log("response.data =>", response.data);
+      //   console.log("RES :", response.data);
     } catch (error) {
       console.log(error.response);
     }
@@ -72,6 +73,11 @@ const CheckoutForm = ({ title, totalPrice }) => {
       // This point is only reached if there's an immediate error when
       // confirming the payment. Show the error to your customer (for example, payment details incomplete)
       handleError(confirmResponse.error);
+      return (
+        <p className="payment-details-error">
+          Informations de paiement invalides ou erronées
+        </p>
+      );
     } else {
       setValidPayment(true);
       // Your customer is redirected to your `return_url`. For some payment
@@ -81,11 +87,11 @@ const CheckoutForm = ({ title, totalPrice }) => {
   };
 
   return validPayment ? (
-    <p>Paiement effectué</p>
+    <p className="payment-valid">Paiement effectué</p>
   ) : (
     <form onSubmit={handleSubmit}>
       <PaymentElement />
-      <button>Submit payment</button>
+      <button className="payment-valid-button">Submit payment</button>
       {errorMessage && <div>{errorMessage}</div>}
     </form>
   );

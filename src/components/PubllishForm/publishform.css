@@ -28,12 +28,12 @@
 .picture-input-design {
   width: 200px;
   height: 50px;
-  border: #05b1ba solid 3px;
+  border: #017782 solid 3px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #05b1ba;
+  color: #017782;
 }
 .picture-input-design input {
   display: none;
@@ -201,7 +201,7 @@
 .create-offer-button {
   width: 100px;
   height: 30px;
-  background-color: #05b1ba;
+  background-color: #017782;
   border: white solid 1px;
   border-radius: 5px;
   color: white;

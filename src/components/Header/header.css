@@ -24,9 +24,9 @@ header section {
   width: 115px;
   height: 30px;
   background-color: white;
-  border: #05b1ba solid 1px;
+  border: #017782 solid 1px;
   border-radius: 5px;
-  color: #05b1ba;
+  color: #017782;
   font-family: Arial, Helvetica, sans-serif;
 }
 .signup:hover {
@@ -36,9 +36,9 @@ header section {
   width: 115px;
   height: 30px;
   background-color: white;
-  border: #05b1ba solid 1px;
+  border: #017782 solid 1px;
   border-radius: 5px;
-  color: #05b1ba;
+  color: #017782;
   font-family: Arial, Helvetica, sans-serif;
 }
 .signin:hover {
@@ -83,7 +83,7 @@ header input {
 .selling-button {
   width: 130px;
   height: 30px;
-  background-color: #05b1ba;
+  background-color: #017782;
   border: white solid 1px;
   border-radius: 5px;
   color: white;
