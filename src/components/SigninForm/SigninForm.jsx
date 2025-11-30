@@ -24,7 +24,7 @@ const SigninForm = ({
         }
       );
       if (response.data.token) {
-        Cookies.set("userToken", response.data.token, { expires: 7 });
+        Cookies.set("userToken", response.data.token, { expires: 10 });
         setToken(response.data.token);
         navigate("/");
         setErrorMessage("");

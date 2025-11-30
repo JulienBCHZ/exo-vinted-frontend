@@ -16,7 +16,7 @@ const Main = ({ search, setSearch }) => {
       const response = await axios.get(
         `https://lereacteur-vinted-api.herokuapp.com/v2/offers?title=${search}`
       );
-      console.log("RES :", response.data);
+      // console.log("RES :", response.data);
       setData(response.data);
       setIsLoading(false);
     };
