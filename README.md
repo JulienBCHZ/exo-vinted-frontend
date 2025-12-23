@@ -47,7 +47,7 @@ L’objectif était d’apprendre à :
 1. Cloner le dépôt :
 
 ```bash
-git clone https://github.com/votre-utilisateur/votre-projet-vinted.git
+git clone https://github.com/JulienBCHZ/exo-vinted-frontend
 ```
 
 2. Installer les dépendances :
@@ -67,3 +67,12 @@ yarn dev
 ```
 
 Un serveur de développement se lancera et l’application sera accessible à l’adresse : http://localhost:5173.
+
+## 📄 License
+
+Ce projet est fourni à des fins éducatives. Il n’est pas destiné à un usage commercial.
+
+## 📡 Contact
+
+Julien Bouchez : julienbouchez@icloud.com
+Profile GitHub : [@JulienBCHZ](https://github.com/JulienBCHZ)
