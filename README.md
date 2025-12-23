@@ -6,7 +6,7 @@
 _Page d'accueil avec recherche, inscription et vignettes d'articles._
 
 ![Capture d'écran 2 - Page d'inscription](./public/screenshot-signup.png)  
-_Formulaire d'inscription avec validation des conditions._
+_Formulaire d'inscription avec validation d'une newsletter._
 
 Projet déployé sur [Netlify](https://www.netlify.com/) et consultable à l'adresse : https://inquisitive-sunburst-f76586.netlify.app/
 
