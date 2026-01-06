@@ -39,7 +39,6 @@ L’objectif était d’apprendre à :
 
 ### Prérequis
 
-- [Node.js](https://nodejs.org/) (version 22 ou supérieure) installé sur la machine
 - npm ou yarn
 
 ### Étapes
