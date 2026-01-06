@@ -10,6 +10,8 @@ _Formulaire d'inscription avec validation d'une newsletter._
 
 Projet déployé sur [Netlify](https://www.netlify.com/) et consultable à l'adresse : https://inquisitive-sunburst-f76586.netlify.app/
 
+---
+
 ## 📌 Description
 
 Ce projet est une réplique fonctionnelle du site Vinted, réalisé pendant ma formation de développeur web/mobile. Il met en pratique les concepts clés de React pour construire une interface dynamique et interactive, avec gestion des routes, authentification et intégration d’un système de paiement.
@@ -21,6 +23,8 @@ L’objectif était d’apprendre à :
 - Implémenter une authentification simple via JS Cookie.
 - Intégrer Stripe pour simuler des paiements en ligne.
 
+---
+
 ## 🏗️ Technologies utilisées
 
 - **React** — Framework principal
@@ -29,11 +33,15 @@ L’objectif était d’apprendre à :
 - **Stripe** — Simulation de paiement (mode test)
 - **CSS** — Style du site
 
+---
+
 ## 🛠️ Développement
 
 - **React Hooks** - pour la gestion d'état locale (`useState` et `useEffect`)
 - `useEffect` - pour le chargement des données
 - `useNavigate` - pour la redirection automatique
+
+---
 
 ## 🚀 Installation
 
@@ -67,9 +75,13 @@ yarn dev
 
 Un serveur de développement se lancera et l’application sera accessible à l’adresse : http://localhost:5173.
 
+---
+
 ## 📄 License
 
 Ce projet est fourni à des fins éducatives. Il n’est pas destiné à un usage commercial.
+
+---
 
 ## 📡 Contact
 
