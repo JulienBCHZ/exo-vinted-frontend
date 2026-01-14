@@ -13,6 +13,7 @@ main {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 0 35%;
 }
 .overlay {
   background-color: white;
