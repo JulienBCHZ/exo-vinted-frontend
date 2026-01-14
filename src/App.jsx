@@ -15,6 +15,8 @@ import Payment from "./pages/Payment/Payment";
 /* COMPOSANTS */
 import Header from "./components/Header/Header";
 
+const API_URL = "https://lereacteur-vinted-api.herokuapp.com";
+
 const stripePromise = loadStripe(
   "pk_test_51HCObyDVswqktOkX6VVcoA7V2sjOJCUB4FBt3EOiAdSz5vWudpWxwcSY8z2feWXBq6lwMgAb5IVZZ1p84ntLq03H00LDVc2RwP"
 );
@@ -26,22 +28,36 @@ function App() {
   return (
     <>
       <Router>
-        <Header setToken={setToken} search={search} setSearch={setSearch} />
+        <Header
+          setToken={setToken}
+          search={search}
+          setSearch={setSearch}
+          API_URL={API_URL}
+        />
         <Routes>
           <Route
             path="/"
-            element={<Home search={search} setSearch={setSearch} />}
+            element={
+              <Home search={search} setSearch={setSearch} API_URL={API_URL} />
+            }
           />
-          <Route path="/offer/:id" element={<Offer />} />
+          <Route path="/offer/:id" element={<Offer API_URL={API_URL} />} />
           <Route
             path="/signup"
-            element={<Signup token={token} setToken={setToken} />}
+            element={
+              <Signup token={token} setToken={setToken} API_URL={API_URL} />
+            }
           />
-          <Route path="/signin" element={<Signin setToken={setToken} />} />
-          <Route path="/publish" element={<Publish />} />
+          <Route
+            path="/signin"
+            element={<Signin setToken={setToken} API_URL={API_URL} />}
+          />
+          <Route path="/publish" element={<Publish API_URL={API_URL} />} />
           <Route
             path="/payment"
-            element={<Payment stripePromise={stripePromise} />}
+            element={
+              <Payment stripePromise={stripePromise} API_URL={API_URL} />
+            }
           />
         </Routes>
       </Router>

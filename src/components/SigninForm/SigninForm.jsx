@@ -8,34 +8,30 @@ const SigninForm = ({
   setEmail,
   password,
   setPassword,
-  errorMessage,
-  setErrorMessage,
   setToken,
+  API_URL,
 }) => {
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
+      const response = await axios.post(`${API_URL}/user/login`, {
+        email: email,
+        password: password,
+      });
       if (response.data.token) {
         Cookies.set("userToken", response.data.token, { expires: 10 });
         setToken(response.data.token);
         navigate("/");
-        setErrorMessage("");
       } else {
-        setErrorMessage("Vérifiez votre email ou votre mot de passe !");
+        alert("Le serveur ne répond pas...");
       }
       //   console.log(response.data);
     } catch (error) {
+      console.log(error);
       error.response
-        ? setErrorMessage(error.response.data.message)
-        : console.log(error);
+        ? alert("Une erreur est survenue : ", error.response.data.message)
+        : alert("Une erreur est survenue...");
     }
   };
   return (
@@ -55,7 +51,6 @@ const SigninForm = ({
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
-        {errorMessage && <p className="signin-error-message">{errorMessage}</p>}
         <button className="submit-button">Se connecter</button>
       </form>
     </div>

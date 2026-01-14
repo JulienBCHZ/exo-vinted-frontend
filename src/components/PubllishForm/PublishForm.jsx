@@ -4,6 +4,7 @@ import { FaPlus } from "react-icons/fa";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { FiAlertCircle } from "react-icons/fi";
 
 //   picture={picture}
 // setPicture={setPicture}
@@ -45,8 +46,7 @@ const PublishForm = ({
   setSize,
   color,
   setColor,
-  errorMessage,
-  setErrorMessage,
+  API_URL,
 }) => {
   const navigate = useNavigate();
   const getUserToken = Cookies.get("userToken");
@@ -66,24 +66,22 @@ const PublishForm = ({
     formData.append("picture", picture);
 
     try {
-      const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
-        formData,
-        {
-          headers: {
-            authorization: `Bearer ${getUserToken}`,
-          },
-        }
-      );
+      const response = await axios.post(`${API_URL}/offer/publish`, formData, {
+        headers: {
+          authorization: `Bearer ${getUserToken}`,
+        },
+      });
       if (response.data._id) {
         navigate(`/offer/${response.data._id}`);
-        setErrorMessage("");
+      } else {
+        alert("Le serveur ne répond pas...");
       }
       console.log("AXIOS RETURN :", response.data);
     } catch (error) {
+      console.log(error);
       error.response
-        ? setErrorMessage(error.response.data.message)
-        : console.log(error);
+        ? alert("Une erreur est survenue : ", error.response.data.message)
+        : alert("Une erreur est survenue...");
     }
   };
   return (

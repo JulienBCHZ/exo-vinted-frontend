@@ -5,7 +5,7 @@ import { useState } from "react";
 import Cookies from "js-cookie";
 import { Navigate } from "react-router-dom";
 
-const Publish = () => {
+const Publish = ({ API_URL }) => {
   const [picture, setPicture] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -43,8 +43,7 @@ const Publish = () => {
             setSize={setSize}
             color={color}
             setColor={setColor}
-            errorMessage={errorMessage}
-            setErrorMessage={setErrorMessage}
+            API_URL={API_URL}
           />
         </section>
       </div>

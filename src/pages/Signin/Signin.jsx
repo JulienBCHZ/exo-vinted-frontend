@@ -3,7 +3,7 @@ import { useState } from "react";
 import SigninForm from "../../components/SigninForm/SigninForm";
 import { Link } from "react-router-dom";
 
-const Signin = ({ setToken }) => {
+const Signin = ({ setToken, API_URL }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -19,9 +19,8 @@ const Signin = ({ setToken }) => {
             setEmail={setEmail}
             password={password}
             setPassword={setPassword}
-            errorMessage={errorMessage}
-            setErrorMessage={setErrorMessage}
             setToken={setToken}
+            API_URL={API_URL}
           />
         </div>
         <div className="to-signup">

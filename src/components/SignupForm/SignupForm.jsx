@@ -22,37 +22,32 @@ const SignupForm = ({
   setPassword,
   newsletter,
   setNewsletter,
-  errorMessage,
-  setErrorMessage,
-  token,
   setToken,
+  API_URL,
 }) => {
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
-        {
-          username: username,
-          email: email,
-          password: password,
-          newsletter: newsletter,
-        }
-      );
+      const response = await axios.post(`${API_URL}/user/signup`, {
+        username: username,
+        email: email,
+        password: password,
+        newsletter: newsletter,
+      });
       if (response.data.token) {
         Cookies.set("userToken", response.data.token, { expires: 10 });
         setToken(response.data.token);
         navigate("/");
-        setErrorMessage("");
       } else {
-        setErrorMessage("Un problème est survenu...");
+        alert("Le serveur ne répond pas...");
       }
       //   console.log(response.data);
     } catch (error) {
+      console.log(error);
       error.response
-        ? setErrorMessage(error.response.data.message)
-        : console.log(error);
+        ? alert("Une erreur est survenue : ", error.response.data.message)
+        : alert("Une erreur est survenue...");
     }
   };
 
@@ -97,7 +92,6 @@ const SignupForm = ({
           value={password}
           onChange={handleChangePassword}
         />
-        {errorMessage && <p className="signup-error-message">{errorMessage}</p>}
         <section className="form-checkbox">
           <div className="line-checkbox">
             <input
