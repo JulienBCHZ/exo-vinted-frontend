@@ -1,4 +1,4 @@
-# ✨ Réplique de Vinted — Projet Front-End en React ✨
+# ✨ Réplique de Vinted — Projet Front-End React ✨
 
 > Une réplique du site Vinted, conçue pour apprendre React et son utilisation dans un projet web marchand.
 
