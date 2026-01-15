@@ -13,7 +13,9 @@
 .offer {
   flex-shrink: 0;
   margin-top: 30px;
+  width: calc((1280px - 80px) / 5);
 }
+
 .username {
   width: 235px;
   height: 45px;
@@ -23,6 +25,7 @@
   padding: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .username > img {
   width: 35px;
   height: 35px;
@@ -34,10 +37,11 @@
   width: 235px;
 } */
 .preview > img {
-  width: 235px;
+  width: 100%;
   height: 360px;
   object-fit: cover;
 }
+
 .preview-details {
   display: flex;
   flex-direction: column;
@@ -46,9 +50,27 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 8px;
 }
+
 .offer-price {
   color: black;
 }
 /* .preview-details div {
   border: black solid 1px;
 } */
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .offer {
+    width: calc(1180px / 4);
+  }
+
+  .preview > img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+  }
+}

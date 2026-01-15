@@ -5,20 +5,32 @@ import heroPicture from "../../assets/hero-picture.jpg";
 import "./main.css";
 
 import Offers from "../Offers/Offers";
-// search={search} setSearch={setSearch}
-const Main = ({ search, setSearch }) => {
+
+const Main = ({ search, API_URL }) => {
   // console.log("SEAR :", search);
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        `https://lereacteur-vinted-api.herokuapp.com/v2/offers?title=${search}`
-      );
-      // console.log("RES :", response.data);
-      setData(response.data);
-      setIsLoading(false);
+      try {
+        const response = await axios.get(
+          `${API_URL}/v2/offers?title=${search}`
+        );
+        if (response.data) {
+          // console.log("RES :", response.data);
+          setData(response.data);
+          setIsLoading(false);
+        } else {
+          console.log("NO RES : ", response);
+          alert("Le serveur ne répond pas...");
+        }
+      } catch (error) {
+        console.log("OFFERS ERROR : ", error);
+        error.response
+          ? alert(error.response.data.message)
+          : alert("Une erreur est survenue");
+      }
     };
     fetchData();
   }, [search]);
@@ -34,11 +46,7 @@ const Main = ({ search, setSearch }) => {
           </div>
         </section>
       </div>
-      {isLoading ? (
-        <div>Loading... Please wait !</div>
-      ) : (
-        <Offers data={data} search={search} />
-      )}
+      {isLoading ? <div>Loading... Please wait !</div> : <Offers data={data} />}
     </main>
   );
 };

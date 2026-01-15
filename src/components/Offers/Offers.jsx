@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const Offers = ({ data }) => {
-  const getUserToken = Cookies.get("userToken");
-  // console.log("TOKEN:", getUserToken);
   const { count, offers } = data;
   //   console.log("TAB :", offers);
   // console.log("SEAR :", search);

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Main from "../components/Main/Main";
 
-const Home = ({ search, setSearch }) => {
-  return <Main search={search} setSearch={setSearch} />;
+const Home = ({ search, setSearch, API_URL }) => {
+  return <Main search={search} API_URL={API_URL} />;
 };
 
 export default Home;
