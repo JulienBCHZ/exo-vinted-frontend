@@ -25,9 +25,9 @@ const Main = ({ search, setSearch }) => {
 
   return (
     <main>
-      <div>
-        <section className="hero">
-          <img src={heroPicture} alt="main-picture" className="main-picture" />
+      <div className="hero-picture">
+        <img src={heroPicture} alt="main-picture" className="main-picture" />
+        <section className="hero-container">
           <div className="overlay">
             <h1>Prêts à faire du tri dans vos placards ?</h1>
             <button>Commencer à vendre</button>
