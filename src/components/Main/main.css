@@ -139,3 +139,32 @@ h1 {
     line-height: 22px;
   }
 }
+
+@media (max-width: 576px) {
+  .hero-container {
+    max-width: 400px;
+    height: 240px;
+  }
+
+  .main-picture {
+    object-position: 0 80%;
+    height: 240px;
+  }
+
+  .overlay {
+    width: 260px;
+    height: 140px;
+    top: 39%;
+    left: 3%;
+  }
+
+  .hero-container button {
+    width: 220px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-container {
+    max-width: 370px;
+  }
+}

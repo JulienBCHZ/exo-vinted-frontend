@@ -203,3 +203,51 @@ header input {
     width: 500px;
   }
 }
+
+@media (max-width: 576px) {
+  .header-top-container {
+    max-width: 390px;
+  }
+
+  .signup-signin {
+    margin-left: 60px;
+  }
+
+  .header-bottom-container {
+    max-width: 390px;
+  }
+
+  .search-line-bottom > input {
+    width: 340px;
+  }
+
+  .signup {
+    width: 90px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .signin {
+    width: 90px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-top-container {
+    max-width: 370px;
+  }
+
+  .signup-signin {
+    margin-left: 20px;
+  }
+
+  .header-bottom-container {
+    max-width: 370px;
+  }
+
+  .search-line-bottom > input {
+    width: 300px;
+  }
+}
