@@ -1,5 +1,7 @@
 import "./header.css";
 import logo from "../../assets/logo-vinted.png";
+import newLogo from "../../assets/logo-vinted-2.svg";
+
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
@@ -8,6 +10,7 @@ import { IoSearch } from "react-icons/io5";
 const Header = ({ setToken, search, setSearch }) => {
   const getUserToken = Cookies.get("userToken");
   const navigate = useNavigate();
+
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearch(value);
@@ -16,9 +19,9 @@ const Header = ({ setToken, search, setSearch }) => {
   return (
     <header>
       <section>
-        <div className="header-top container">
+        <div className="header-top-container">
           <Link to="/">
-            <img src={logo} alt="Vinted logo" className="header-logo" />
+            <img src={newLogo} alt="Vinted logo" className="header-logo" />
           </Link>
           <div className="search-line">
             <div className="search-logo">
@@ -69,6 +72,20 @@ const Header = ({ setToken, search, setSearch }) => {
           <Link to="/publish">
             <button className="selling-button">Vends tes articles</button>
           </Link>
+        </div>
+        <div className="header-bottom-container">
+          <div className="search-line-bottom">
+            <div className="search-logo">
+              <IoSearch />
+            </div>
+            <input
+              type="text"
+              placeholder="Rechercher des articles"
+              name="search"
+              value={search}
+              onChange={handleSearch}
+            />
+          </div>
         </div>
       </section>
     </header>

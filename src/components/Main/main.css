@@ -55,4 +55,87 @@ h1 {
   .hero-container {
     max-width: 1180px;
   }
+
+  .main-picture {
+    object-position: 0 45%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .hero-container {
+    max-width: 1024px;
+    height: 322px;
+  }
+
+  .main-picture {
+    height: 322px;
+    width: 100vw;
+    object-position: 0 50%;
+  }
+
+  .overlay {
+    width: 384px;
+    height: 240px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    max-width: 992px;
+  }
+
+  .main-picture {
+    object-position: 0 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    max-width: 768px;
+    height: 280px;
+  }
+
+  .main-picture {
+    object-position: 0 52%;
+    height: 280px;
+  }
+
+  .overlay {
+    width: 344px;
+    height: 180px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    max-width: 576px;
+    height: 280px;
+  }
+
+  .main-picture {
+    object-position: 0 68%;
+    height: 280px;
+  }
+
+  .overlay {
+    width: 300px;
+    height: 160px;
+    padding: 10px 20px;
+    align-items: center;
+    top: 40%;
+    left: 15%;
+  }
+
+  .overlay > h1 {
+    font-size: 20px;
+  }
+
+  .hero-container button {
+    width: 260px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }

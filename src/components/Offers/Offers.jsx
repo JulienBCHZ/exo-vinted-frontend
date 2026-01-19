@@ -8,7 +8,7 @@ const Offers = ({ data }) => {
   // console.log("SEAR :", search);
 
   return (
-    <section className="offers-previews container">
+    <section className="offers-previews-container">
       {offers.map((offer) => {
         return (
           <div key={offer._id} className="offer">
