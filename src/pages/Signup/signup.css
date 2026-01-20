@@ -18,7 +18,7 @@ p {
   margin: 30px 0;
 }
 
-.title {
+.title-signup {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,4 +37,14 @@ p {
 }
 .no-acount:hover {
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .signup-container {
+    margin: 20px 0;
+  }
+
+  .title-signup > h1 {
+    font-size: 20px;
+  }
 }

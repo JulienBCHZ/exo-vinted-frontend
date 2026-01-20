@@ -1,7 +1,7 @@
-.form-container {
+.form-container-signup {
   width: 400px;
   margin: 0 auto;
-  padding: 30px 40px;
+  padding: 30px 20px;
 }
 
 .form-vision-signup {
@@ -95,4 +95,29 @@ input {
 .field-error-text > p {
   font-size: 16px;
   font-style: italic;
+}
+
+@media (max-width: 576px) {
+  .form-container-signup {
+    padding: 20px 20px;
+  }
+
+  .form-vision-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .field-error-text > p {
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-container-signup {
+    width: 370px;
+    margin: 0 auto;
+    padding: 20px 20px;
+  }
 }

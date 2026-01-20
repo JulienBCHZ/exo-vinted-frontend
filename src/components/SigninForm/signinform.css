@@ -1,9 +1,9 @@
-.form-container {
+.form-container-signin {
   width: 400px;
   margin: 0 auto;
   padding: 30px 40px;
 }
-.form-vision {
+.form-vision-signin {
   display: flex;
   flex-direction: column;
   gap: 40px;

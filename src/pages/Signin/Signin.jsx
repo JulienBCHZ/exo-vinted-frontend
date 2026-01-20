@@ -12,7 +12,7 @@ const Signin = ({ setToken, API_URL }) => {
   return (
     <main>
       <section className="signin-container">
-        <div className="title">
+        <div className="title-signin">
           <h1>Se connecter</h1>
         </div>
         <div>

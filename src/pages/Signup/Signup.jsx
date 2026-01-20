@@ -13,7 +13,7 @@ const Signup = ({ token, setToken, API_URL }) => {
   return (
     <main>
       <section className="signup-container">
-        <div className="title">
+        <div className="title-signup">
           <h1>S'inscrire</h1>
         </div>
         <div>

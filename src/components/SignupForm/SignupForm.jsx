@@ -111,7 +111,7 @@ const SignupForm = ({
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container-signup">
       <form onSubmit={handleSubmit} className="form-vision-signup">
         <div className="input-fields">
           <input
