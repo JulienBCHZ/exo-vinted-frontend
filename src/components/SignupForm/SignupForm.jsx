@@ -2,7 +2,7 @@ import "./signupform.css";
 
 import axios from "axios";
 import Cookies from "js-cookie";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 const SignupForm = ({
@@ -23,6 +23,7 @@ const SignupForm = ({
   const [submitLoading, setSubmitLoading] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -48,7 +49,7 @@ const SignupForm = ({
           Cookies.set("userToken", response.data.token, { expires: 10 });
           setToken(response.data.token);
           setSubmitLoading(false);
-          navigate("/");
+          location.state ? navigate(location.state.from) : navigate("/");
         } else {
           alert("Le serveur ne répond pas...");
           setSubmitLoading(false);
