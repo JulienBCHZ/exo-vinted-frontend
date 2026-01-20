@@ -1,7 +1,9 @@
 import "./signinform.css";
+
 import axios from "axios";
 import Cookies from "js-cookie";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const SigninForm = ({
   email,
@@ -11,9 +13,17 @@ const SigninForm = ({
   setToken,
   API_URL,
 }) => {
+  const [submitLoading, setSubmitLoading] = useState(false);
+
   const navigate = useNavigate();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!email || !password) {
+      alert("Votre Email et votre mot de passe sont requis");
+    }
+    setSubmitLoading(true);
     try {
       const response = await axios.post(`${API_URL}/user/login`, {
         email: email,
@@ -22,16 +32,19 @@ const SigninForm = ({
       if (response.data.token) {
         Cookies.set("userToken", response.data.token, { expires: 10 });
         setToken(response.data.token);
+        setSubmitLoading(false);
         navigate("/");
       } else {
         alert("Le serveur ne répond pas...");
+        setSubmitLoading(false);
       }
       //   console.log(response.data);
     } catch (error) {
       console.log(error);
       error.response
-        ? alert("Une erreur est survenue : ", error.response.data.message)
+        ? alert(error.response.data.message)
         : alert("Une erreur est survenue...");
+      setSubmitLoading(false);
     }
   };
   return (
@@ -51,7 +64,13 @@ const SigninForm = ({
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />
-        <button className="submit-button">Se connecter</button>
+        {submitLoading || !email || !password ? (
+          <div className="submit-button-signin-disabled">
+            <p>Se connecter</p>
+          </div>
+        ) : (
+          <button className="submit-button-signin">Se connecter</button>
+        )}
       </form>
     </div>
   );

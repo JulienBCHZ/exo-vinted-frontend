@@ -66,7 +66,7 @@ const SignupForm = ({
       } catch (error) {
         console.log(error);
         error.response
-          ? alert("Une erreur est survenue : ", error.response.data.message)
+          ? alert(error.response.data.message)
           : alert("Une erreur est survenue...");
         setSubmitLoading(false);
       }
@@ -77,7 +77,7 @@ const SignupForm = ({
     const value = event.target.value;
     setUsername(value);
     if (value.length > 0 && value.length < 4) {
-      setUsernameError("username is too short");
+      setUsernameError("username trop court");
     } else {
       setUsernameError("");
     }
@@ -87,9 +87,9 @@ const SignupForm = ({
     const value = event.target.value;
     setEmail(value);
     if (value.length > 0 && value.length < 6) {
-      setEmailError("Invalid email format");
+      setEmailError("format email invalide");
     } else if (!value.includes("@") && value.length > 0) {
-      setEmailError("Invalid email format");
+      setEmailError("format email invalide");
     } else {
       setEmailError("");
     }
@@ -99,7 +99,7 @@ const SignupForm = ({
     const value = event.target.value;
     setPassword(value);
     if (value.length < 6 && value.length > 0) {
-      setPasswordError("password is too short");
+      setPasswordError("mot de passe trop court");
     } else {
       setPasswordError("");
     }
