@@ -17,10 +17,10 @@ const Offers = ({ data }) => {
                 {offer.owner.account.avatar ? (
                   <img
                     src={offer.owner.account.avatar.secure_url}
-                    alt="user avatar"
+                    alt="avatar"
                   />
                 ) : (
-                  <img alt="user avatar" />
+                  <img alt="avatar" />
                 )}
                 <span>{offer.owner.account.username}</span>
               </div>

@@ -67,6 +67,10 @@
   .preview > img {
     height: 370px;
   }
+
+  .username {
+    width: 250px;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -83,6 +87,10 @@
   .preview > img {
     height: 370px;
   }
+
+  .username {
+    width: 250px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -98,6 +106,10 @@
   .preview > img {
     height: 370px;
   }
+
+  .username {
+    width: 250px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -112,6 +124,16 @@
 
   .preview > img {
     height: 300px;
+  }
+
+  .username {
+    width: 225px;
+    padding: 7px;
+  }
+
+  .username > img {
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -129,6 +151,17 @@
   .preview > img {
     height: 320px;
   }
+
+  .username {
+    width: 230px;
+    height: 45px;
+    padding: 7px;
+  }
+
+  .username > img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -145,6 +178,18 @@
   .preview > img {
     height: 300px;
   }
+
+  .username {
+    width: 175px;
+    height: 45px;
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .username > img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -160,5 +205,12 @@
 
   .preview > img {
     height: 280px;
+  }
+
+  .username {
+    width: 165px;
+    height: 40px;
+    padding: 5px;
+    gap: 3px;
   }
 }
