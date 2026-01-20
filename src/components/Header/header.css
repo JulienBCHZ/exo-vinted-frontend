@@ -232,15 +232,15 @@ header input {
     height: 30px;
     font-size: 12px;
   }
+
+  .logout-button {
+    margin-left: 100px;
+  }
 }
 
 @media (max-width: 400px) {
   .header-top-container {
     max-width: 370px;
-  }
-
-  .signup-signin {
-    margin-left: 20px;
   }
 
   .header-bottom-container {

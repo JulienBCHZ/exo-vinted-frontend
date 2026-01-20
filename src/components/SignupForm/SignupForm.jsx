@@ -5,15 +5,6 @@ import Cookies from "js-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-// {
-//     "_id": "69205d2f5d2b12d94cdfd4a7",
-//     "email": "serge@julien.com",
-//     "token": "XRMa_0K7QNBUAux-sHD6POJA0pryoOwcAvh8q5Ye5sF0CBTv3dTu8r7Oy6cw5ILR",
-//     "account": {
-//         "username": "julienbouchez"
-//     }
-// }
-
 const SignupForm = ({
   username,
   setUsername,
