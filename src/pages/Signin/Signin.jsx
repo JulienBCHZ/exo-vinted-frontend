@@ -1,12 +1,14 @@
 import "./signin.css";
+
 import { useState } from "react";
-import SigninForm from "../../components/SigninForm/SigninForm";
 import { Link } from "react-router-dom";
+
+import SigninForm from "../../components/SigninForm/SigninForm";
 
 const Signin = ({ setToken, API_URL }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+
   return (
     <main>
       <section className="signin-container">

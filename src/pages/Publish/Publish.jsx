@@ -15,7 +15,6 @@ const Publish = ({ API_URL }) => {
   const [brand, setBrand] = useState("");
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
   const getUserToken = Cookies.get("userToken");
 
