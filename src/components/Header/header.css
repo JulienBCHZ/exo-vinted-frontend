@@ -218,7 +218,7 @@ header input {
   }
 
   .signup-signin {
-    margin-left: 60px;
+    margin-left: 90px;
   }
 
   .header-bottom-container {
@@ -253,6 +253,10 @@ header input {
 
   .header-bottom-container {
     max-width: 370px;
+  }
+
+  .signup-signin {
+    margin-left: 78px;
   }
 
   .search-line-bottom > input {
