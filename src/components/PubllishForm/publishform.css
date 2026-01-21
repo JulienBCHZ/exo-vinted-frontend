@@ -12,14 +12,17 @@
   justify-content: center;
   align-items: center;
 }
+
 .publish-form-middle-top {
   background-color: white;
   border-radius: 3px;
 }
+
 .publish-middle-bottom {
   background-color: white;
   border-radius: 3px;
 }
+
 .publish-form-bottom {
   background-color: white;
   border-radius: 3px;
@@ -35,9 +38,11 @@
   justify-content: center;
   color: #017782;
 }
+
 .picture-input-design input {
   display: none;
 }
+
 .file-label {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -46,6 +51,7 @@
   align-items: center;
   gap: 10px;
 }
+
 .file-label:hover {
   cursor: pointer;
 }
@@ -59,6 +65,7 @@
   border-bottom: #ecedee solid 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .title-line > input {
   width: 600px;
   height: 30px;
@@ -75,6 +82,7 @@
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .description-line > input {
   width: 600px;
   height: 70px;
@@ -92,6 +100,7 @@
   border-bottom: #ecedee solid 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .brand-line > input {
   width: 600px;
   height: 30px;
@@ -109,6 +118,7 @@
   border-bottom: #ecedee solid 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .size-line > input {
   width: 600px;
   height: 30px;
@@ -126,6 +136,7 @@
   border-bottom: #ecedee solid 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .color-line > input {
   width: 600px;
   height: 30px;
@@ -143,6 +154,7 @@
   border-bottom: #ecedee solid 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .condition-line > input {
   width: 600px;
   height: 30px;
@@ -159,6 +171,7 @@
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .city-line > input {
   width: 600px;
   height: 30px;
@@ -175,6 +188,7 @@
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .price-line > input {
   width: 600px;
   height: 30px;
@@ -198,6 +212,7 @@
   justify-content: flex-end;
   margin-top: 10px;
 }
+
 .create-offer-button {
   width: 100px;
   height: 30px;

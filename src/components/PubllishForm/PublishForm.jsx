@@ -1,31 +1,11 @@
 import "./publishform.css";
-import { FaPlus } from "react-icons/fa";
 
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import { FiAlertCircle } from "react-icons/fi";
 
-//   picture={picture}
-// setPicture={setPicture}
-// title={title}
-// setTitle={setTitle}
-// description={description}
-// setDescription={setDescription}
-// price={price}
-// setPrice={setPrice}
-// condition={condition}
-// setCondition={setCondition}
-// city={city}
-// setCity={setCity}
-// brand={brand}
-// setBrand={setBrand}
-// size={size}
-// setSize={setSize}
-// color={color}
-// setColor={setColor}
-//  errorMessage={errorMessage}
-//     setErrorMessage={setErrorMessage}
+import { FaPlus } from "react-icons/fa";
+import { FiAlertCircle } from "react-icons/fi";
 
 const PublishForm = ({
   picture,
@@ -54,34 +34,43 @@ const PublishForm = ({
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
-    formData.append("title", title);
-    formData.append("description", description);
-    formData.append("price", Number(price));
-    formData.append("condition", condition);
-    formData.append("city", city);
-    formData.append("brand", brand);
-    formData.append("size", Number(size));
-    formData.append("color", color);
-    formData.append("picture", picture);
 
-    try {
-      const response = await axios.post(`${API_URL}/offer/publish`, formData, {
-        headers: {
-          authorization: `Bearer ${getUserToken}`,
-        },
-      });
-      if (response.data._id) {
-        navigate(`/offer/${response.data._id}`);
-      } else {
-        alert("Le serveur ne répond pas...");
+    if (!title || !price) {
+      alert("Le titre et le prix de l'annonce sont nécessaire !");
+    } else {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("description", description);
+      formData.append("price", Number(price));
+      formData.append("condition", condition);
+      formData.append("city", city);
+      formData.append("brand", brand);
+      formData.append("size", Number(size));
+      formData.append("color", color);
+      formData.append("picture", picture);
+
+      try {
+        const response = await axios.post(
+          `${API_URL}/offer/publish`,
+          formData,
+          {
+            headers: {
+              authorization: `Bearer ${getUserToken}`,
+            },
+          },
+        );
+        if (response.data._id) {
+          navigate(`/offer/${response.data._id}`);
+        } else {
+          alert("Le serveur ne répond pas...");
+        }
+        console.log("AXIOS RETURN :", response.data);
+      } catch (error) {
+        console.log(error);
+        error.response
+          ? alert(error.response.data.message)
+          : alert("Une erreur est survenue...");
       }
-      console.log("AXIOS RETURN :", response.data);
-    } catch (error) {
-      console.log(error);
-      error.response
-        ? alert("Une erreur est survenue : ", error.response.data.message)
-        : alert("Une erreur est survenue...");
     }
   };
   return (

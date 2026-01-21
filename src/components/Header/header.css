@@ -184,6 +184,10 @@ header input {
     background-color: #ecedee;
     outline: none;
   }
+
+  .logout-button {
+    margin-left: 550px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -201,6 +205,10 @@ header input {
 
   .search-line-bottom > input {
     width: 500px;
+  }
+
+  .logout-button {
+    margin-left: 360px;
   }
 }
 
@@ -234,7 +242,7 @@ header input {
   }
 
   .logout-button {
-    margin-left: 100px;
+    margin-left: 180px;
   }
 }
 
@@ -249,5 +257,9 @@ header input {
 
   .search-line-bottom > input {
     width: 300px;
+  }
+
+  .logout-button {
+    margin-left: 160px;
   }
 }
