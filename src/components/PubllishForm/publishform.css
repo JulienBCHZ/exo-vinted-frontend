@@ -83,12 +83,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.description-line > input {
+.description-line > textarea {
   width: 600px;
   height: 70px;
   border: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .brand-line {
@@ -221,4 +222,32 @@
   border-radius: 5px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 992px) {
+  .publish-form-middle-top label {
+    display: none;
+  }
+
+  .publish-form-middle-top label {
+    display: none;
+  }
+
+  .publish-middle-bottom label {
+    display: none;
+  }
+
+  .publish-form-bottom label {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .exchange-checkbox {
+    height: 50px;
+  }
+
+  .exchange-checkbox > span {
+    font-size: 14px;
+  }
 }

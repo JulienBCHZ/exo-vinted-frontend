@@ -105,7 +105,7 @@ const PublishForm = ({
         </div>
         <div className="description-line">
           <label htmlFor="description">Décris ton article</label>
-          <input
+          <textarea
             type="text"
             placeholder="Description"
             name="descrition"
@@ -113,7 +113,7 @@ const PublishForm = ({
             onChange={(event) => {
               setDescription(event.target.value);
             }}
-          />
+          ></textarea>
         </div>
       </section>
       <section className="publish-middle-bottom">
