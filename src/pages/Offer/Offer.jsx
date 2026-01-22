@@ -7,16 +7,16 @@ import Cookies from "js-cookie";
 import { Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-const Offer = () => {
+const Offer = ({ API_URL }) => {
   const getUserToken = Cookies.get("userToken");
 
   const params = useParams();
   const { id } = params;
-  console.log(id);
+  // console.log(id);
 
   return getUserToken ? (
     <main className="main-offer">
-      <OfferPresentation />
+      <OfferPresentation API_URL={API_URL} />
     </main>
   ) : (
     <Navigate to="/signin" state={{ from: `/offer/${id}` }} />

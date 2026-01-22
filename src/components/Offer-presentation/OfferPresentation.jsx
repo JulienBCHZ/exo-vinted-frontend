@@ -4,20 +4,30 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const OfferPresentation = () => {
+const OfferPresentation = ({ API_URL }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [offerData, setOfferData] = useState(null);
 
   const params = useParams();
   const { id } = params;
+
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        `https://lereacteur-vinted-api.herokuapp.com/offer/${id}`
-      );
-      console.log("DATA OFFER", response.data);
-      setOfferData(response.data);
-      setIsLoading(false);
+      try {
+        const response = await axios.get(`${API_URL}/offer/${id}`);
+        if (response.data) {
+          // console.log("DATA OFFER", response.data);
+          setOfferData(response.data);
+          setIsLoading(false);
+        } else {
+          alert("Le serveur ne répond pas...");
+        }
+      } catch (error) {
+        console.log("OFFER ERR : ", error);
+        error.response
+          ? alert(error.response.data.message)
+          : alert("Une erreur est survenue...");
+      }
     };
     fetchData();
   }, [id]);
@@ -28,6 +38,7 @@ const OfferPresentation = () => {
         <p>Loading... Please wait !</p>
       ) : (
         <>
+          <h1 className="offer-presentation-title">{offerData.product_name}</h1>
           {offerData.product_image ? (
             <img
               src={offerData.product_image.secure_url}

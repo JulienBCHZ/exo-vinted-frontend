@@ -30,6 +30,7 @@ L’objectif était d’apprendre à :
 - **JS Cookie** — Gestion de l’authentification (session), via le stockage du token de l'utilisateur dans un cookie
 - **Stripe** — Simulation de paiement (mode test)
 - **CSS** — Style du site
+- **Responsive Design** — La structure de la page s'adapte à la taille du viewport
 
 ---
 
