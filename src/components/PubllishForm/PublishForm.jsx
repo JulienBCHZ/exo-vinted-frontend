@@ -45,7 +45,7 @@ const PublishForm = ({
       formData.append("condition", condition);
       formData.append("city", city);
       formData.append("brand", brand);
-      formData.append("size", Number(size));
+      formData.append("size", size);
       formData.append("color", color);
       formData.append("picture", picture);
 
