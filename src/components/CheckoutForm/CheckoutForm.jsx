@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 import axios from "axios";
 
-const CheckoutForm = ({ title, totalPrice }) => {
+const CheckoutForm = ({ title, totalPrice, API_URL }) => {
   const stripe = useStripe();
   const elements = useElements();
   //   console.log("CHECK :", title, totalPrice);
@@ -43,17 +43,17 @@ const CheckoutForm = ({ title, totalPrice }) => {
     let response;
     try {
       // Create the PaymentIntent and obtain clientSecret
-      response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/v2/payment",
-        {
-          title: title,
-          amount: totalPrice,
-          // Titre et montant de l'annonce
-        }
-      );
+      response = await axios.post(`${API_URL}/v2/payment`, {
+        title: title,
+        amount: totalPrice,
+        // Titre et montant de l'annonce
+      });
       //   console.log("RES :", response.data);
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
+      error.response
+        ? alert(error.response.data.message)
+        : alert("Une erreur est survenue...");
     }
 
     const { client_secret: clientSecret } = response.data;
@@ -73,11 +73,7 @@ const CheckoutForm = ({ title, totalPrice }) => {
       // This point is only reached if there's an immediate error when
       // confirming the payment. Show the error to your customer (for example, payment details incomplete)
       handleError(confirmResponse.error);
-      return (
-        <p className="payment-details-error">
-          Informations de paiement invalides ou erronées
-        </p>
-      );
+      return alert("Informations de paiement invalides ou erronées");
     } else {
       setValidPayment(true);
       // Your customer is redirected to your `return_url`. For some payment
@@ -92,7 +88,7 @@ const CheckoutForm = ({ title, totalPrice }) => {
     <form onSubmit={handleSubmit}>
       <PaymentElement />
       <button className="payment-valid-button">Submit payment</button>
-      {errorMessage && <div>{errorMessage}</div>}
+      {errorMessage && <p className="checkout-error-message">{errorMessage}</p>}
     </form>
   );
 };

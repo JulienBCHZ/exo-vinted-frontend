@@ -7,7 +7,7 @@ import { Elements } from "@stripe/react-stripe-js";
 
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm.jsx";
 
-const Payment = ({ stripePromise }) => {
+const Payment = ({ stripePromise, API_URL }) => {
   const getUserToken = Cookies.get("userToken");
   const offerDetails = useLocation();
   //   console.log(offerDetails.state);
@@ -61,7 +61,11 @@ const Payment = ({ stripePromise }) => {
         </section>
         <section className="order-payment-method">
           <Elements stripe={stripePromise} options={options}>
-            <CheckoutForm title={title} totalPrice={totalPrice} />
+            <CheckoutForm
+              title={title}
+              totalPrice={totalPrice}
+              API_URL={API_URL}
+            />
           </Elements>
         </section>
       </div>

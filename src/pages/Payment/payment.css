@@ -5,7 +5,7 @@
 
 .payment-container {
   border-radius: 3px;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 50px 0;
 }
@@ -77,4 +77,32 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .payment-container {
+    max-width: 576px;
+    padding: 40px 0;
+  }
+
+  .order-payment-method {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .payment-container {
+    max-width: 400px;
+    padding: 20px 0;
+  }
+
+  .order-resume {
+    padding: 20px 20px;
+  }
+
+  .order-total {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

@@ -4,16 +4,43 @@
   line-height: 20px;
   color: rgb(20, 173, 20);
 }
+
 .payment-valid-button {
   width: 600px;
   height: 40px;
   margin-top: 20px;
+  margin-bottom: 7px;
   background-color: rgb(20, 173, 20);
   color: white;
   font-size: 16px;
   border: none;
   border-radius: 5px;
 }
+
 .payment-valid-button:hover {
   cursor: pointer;
+}
+
+.checkout-error-message {
+  color: red;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  .payment-valid-button {
+    width: 536px;
+  }
+}
+
+@media (max-width: 576px) {
+  .payment-valid-button {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .payment-valid-button {
+    width: 280px;
+  }
 }
