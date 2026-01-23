@@ -11,6 +11,7 @@ import Signup from "./pages/Signup/Signup";
 import Signin from "./pages/Signin/Signin";
 import Publish from "./pages/Publish/Publish";
 import Payment from "./pages/Payment/Payment";
+import Catchall from "./pages/Catchall/Catchall";
 
 /* COMPOSANTS */
 import Header from "./components/Header/Header";
@@ -18,7 +19,7 @@ import Header from "./components/Header/Header";
 const API_URL = "https://lereacteur-vinted-api.herokuapp.com";
 
 const stripePromise = loadStripe(
-  "pk_test_51HCObyDVswqktOkX6VVcoA7V2sjOJCUB4FBt3EOiAdSz5vWudpWxwcSY8z2feWXBq6lwMgAb5IVZZ1p84ntLq03H00LDVc2RwP"
+  "pk_test_51HCObyDVswqktOkX6VVcoA7V2sjOJCUB4FBt3EOiAdSz5vWudpWxwcSY8z2feWXBq6lwMgAb5IVZZ1p84ntLq03H00LDVc2RwP",
 );
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
               <Payment stripePromise={stripePromise} API_URL={API_URL} />
             }
           />
+          <Route path="/*" element={<Catchall />} />
         </Routes>
       </Router>
     </>
