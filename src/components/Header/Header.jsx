@@ -14,6 +14,7 @@ const Header = ({ setToken, search, setSearch }) => {
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearch(value);
+    navigate("/");
   };
 
   return (
