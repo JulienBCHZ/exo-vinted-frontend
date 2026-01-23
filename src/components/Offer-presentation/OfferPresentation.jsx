@@ -16,7 +16,7 @@ const OfferPresentation = ({ API_URL }) => {
       try {
         const response = await axios.get(`${API_URL}/offer/${id}`);
         if (response.data) {
-          // console.log("DATA OFFER", response.data);
+          console.log("DATA OFFER", response.data);
           setOfferData(response.data);
           setIsLoading(false);
         } else {
@@ -60,21 +60,21 @@ const OfferPresentation = ({ API_URL }) => {
               <div>
                 {offerData.product_details.map((element, index) => {
                   return (
-                    <>
+                    <section key={index}>
                       {element["MARQUE"] && (
-                        <div className="product-details" key={index}>
+                        <div className="product-details">
                           <p className="detail-type">MARQUE</p>
                           <p className="detail-name">{element["MARQUE"]}</p>
                         </div>
                       )}
                       {element["TAILLE"] && (
-                        <div className="product-details" key={index}>
+                        <div className="product-details">
                           <p className="detail-type">TAILLE</p>
                           <p className="detail-name">{element["TAILLE"]}</p>
                         </div>
                       )}
                       {element["ÉTAT"] && (
-                        <div className="product-details" key={index}>
+                        <div className="product-details">
                           <p className="detail-type">ÉTAT</p>
                           <p className="detail-name">{element["ÉTAT"]}</p>
                         </div>
@@ -94,14 +94,14 @@ const OfferPresentation = ({ API_URL }) => {
                         </div>
                       )}
                       {element["MODE DE PAIEMENT"] && (
-                        <div className="product-details" key={index}>
+                        <div className="product-details">
                           <p className="detail-type">MODE DE PAIEMENT</p>
                           <p className="detail-name">
                             {element["MODE DE PAIEMENT"]}
                           </p>
                         </div>
                       )}
-                    </>
+                    </section>
                   );
                 })}
               </div>

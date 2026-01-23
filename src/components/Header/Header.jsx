@@ -1,20 +1,22 @@
 import "./header.css";
-import logo from "../../assets/logo-vinted.png";
 import newLogo from "../../assets/logo-vinted-2.svg";
 
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { IoSearch } from "react-icons/io5";
 
 const Header = ({ setToken, search, setSearch }) => {
   const getUserToken = Cookies.get("userToken");
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearch(value);
-    navigate("/");
+    if (location.pathname != "/") {
+      navigate("/");
+    }
   };
 
   return (

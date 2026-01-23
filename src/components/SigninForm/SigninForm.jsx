@@ -42,8 +42,8 @@ const SigninForm = ({
       //   console.log(response.data);
     } catch (error) {
       console.log(error);
-      error.response
-        ? alert(error.response.data.message)
+      error.message === "Request failed with status code 401"
+        ? alert("Vérifiez votre email et votre mot de passe")
         : alert("Une erreur est survenue...");
       setSubmitLoading(false);
     }

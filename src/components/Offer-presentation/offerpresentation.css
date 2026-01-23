@@ -131,14 +131,14 @@
   }
 
   .product-image {
-    width: 340px;
-    height: 450px;
+    width: 360px;
+    height: 490px;
   }
 
   .product-presentation {
     width: 340px;
-    height: 450px;
-    padding: 30px 10px;
+    height: 490px;
+    padding: 10px 10px;
     border-radius: 3px;
   }
 
@@ -174,7 +174,7 @@
   .product-presentation {
     width: 380px;
     height: 500px;
-    padding: 30px 30px;
+    padding: 20px 30px;
     border-radius: 3px;
     margin: 10px 0;
   }
@@ -188,7 +188,6 @@
 
   .offer-presentation-title {
     display: block;
-    margin-top: 20px;
     max-width: 400px;
     margin-left: 10px;
     margin-right: 10px;
