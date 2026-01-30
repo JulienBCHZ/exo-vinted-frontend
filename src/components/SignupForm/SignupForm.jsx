@@ -6,6 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 import { FaRegEye } from "react-icons/fa";
+import { IoEyeOffOutline } from "react-icons/io5";
 
 const SignupForm = ({
   username,
@@ -159,7 +160,7 @@ const SignupForm = ({
             className="password-eye"
             onClick={() => setShowPassword(!showPassword)}
           >
-            <FaRegEye />
+            {showPassword ? <IoEyeOffOutline /> : <FaRegEye />}
           </span>
         </div>
         <section className="form-checkbox">

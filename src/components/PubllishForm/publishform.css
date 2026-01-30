@@ -77,6 +77,11 @@
   order: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-size: 16px;
+}
+
+.title-line > input::placeholder {
+  color: #a7a7a7;
 }
 
 .description-line {
@@ -95,6 +100,11 @@
   border-bottom: #ecedee solid;
   outline: none;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.description-line > textarea::placeholder {
+  color: #a7a7a7;
 }
 
 .brand-line {
@@ -113,6 +123,11 @@
   order: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-size: 16px;
+}
+
+.brand-line > input::placeholder {
+  color: #a7a7a7;
 }
 
 .size-line {
@@ -131,6 +146,11 @@
   order: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-size: 16px;
+}
+
+.size-line > input::placeholder {
+  color: #a7a7a7;
 }
 
 .color-line {
@@ -149,6 +169,11 @@
   order: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-size: 16px;
+}
+
+.color-line > input::placeholder {
+  color: #a7a7a7;
 }
 
 .condition-line {
@@ -167,6 +192,11 @@
   order: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-size: 16px;
+}
+
+.condition-line > input::placeholder {
+  color: #a7a7a7;
 }
 
 .city-line {
@@ -184,6 +214,11 @@
   order: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-size: 16px;
+}
+
+.city-line > input::placeholder {
+  color: #a7a7a7;
 }
 
 .price-line {
@@ -201,6 +236,11 @@
   order: none;
   border-bottom: #ecedee solid;
   outline: none;
+  font-size: 16px;
+}
+
+.price-line > input::placeholder {
+  color: #a7a7a7;
 }
 
 .exchange-checkbox {

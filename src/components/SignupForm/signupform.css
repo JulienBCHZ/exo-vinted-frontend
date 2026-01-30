@@ -15,6 +15,11 @@ input {
   border: none;
   border-bottom: pink solid;
   outline: none;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #a7a7a7;
 }
 
 .submit-button-signup {

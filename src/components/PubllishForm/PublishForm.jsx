@@ -92,7 +92,7 @@ const PublishForm = ({
       </section>
       <section className="publish-form-middle-top">
         <div className="title-line">
-          <label htmlFor="title">Titre</label>
+          <label htmlFor="title">Titre :</label>
           <input
             type="text"
             placeholder="Title"
@@ -104,7 +104,7 @@ const PublishForm = ({
           />
         </div>
         <div className="description-line">
-          <label htmlFor="description">Décris ton article</label>
+          <label htmlFor="description">Décris ton article :</label>
           <textarea
             type="text"
             placeholder="Description"
@@ -118,7 +118,7 @@ const PublishForm = ({
       </section>
       <section className="publish-middle-bottom">
         <div className="brand-line">
-          <label htmlFor="brand">Marque</label>
+          <label htmlFor="brand">Marque :</label>
           <input
             type="text"
             placeholder="Marque"
@@ -130,7 +130,7 @@ const PublishForm = ({
           />
         </div>
         <div className="size-line">
-          <label htmlFor="title">Taille</label>
+          <label htmlFor="title">Taille :</label>
           <input
             type="text"
             placeholder="Taille"
@@ -142,7 +142,7 @@ const PublishForm = ({
           />
         </div>
         <div className="color-line">
-          <label htmlFor="color">Couleur</label>
+          <label htmlFor="color">Couleur :</label>
           <input
             type="text"
             placeholder="Couleur"
@@ -154,7 +154,7 @@ const PublishForm = ({
           />
         </div>
         <div className="condition-line">
-          <label htmlFor="condition">Etat</label>
+          <label htmlFor="condition">Etat :</label>
           <input
             type="text"
             placeholder="Etat"
@@ -166,7 +166,7 @@ const PublishForm = ({
           />
         </div>
         <div className="city-line">
-          <label htmlFor="city">Lieu</label>
+          <label htmlFor="city">Lieu :</label>
           <input
             type="text"
             placeholder="Lieu"
@@ -180,7 +180,7 @@ const PublishForm = ({
       </section>
       <section className="publish-form-bottom">
         <div className="price-line">
-          <label htmlFor="price">Prix</label>
+          <label htmlFor="price">Prix :</label>
           <input
             type="text"
             placeholder="Prix"
