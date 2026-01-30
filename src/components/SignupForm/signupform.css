@@ -24,9 +24,10 @@ input::placeholder {
 
 .input-error {
   height: 50px;
-  border: none;
-  background-color: rgba(255, 0, 0, 0.386);
-  border-bottom: pink solid;
+  border: red solid 2px;
+  color: red;
+  /* background-color: rgba(255, 0, 0, 0.386); */
+  /* border-bottom: pink solid; */
   outline: none;
   font-size: 16px;
   border-radius: 3px;

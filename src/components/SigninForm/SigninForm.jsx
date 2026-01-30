@@ -66,7 +66,7 @@ const SigninForm = ({
         <div className="signin-password-input-field">
           <input
             type={showPassword ? "text" : "password"}
-            placeholder="Password"
+            placeholder="Mot de passe"
             name="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
@@ -80,7 +80,7 @@ const SigninForm = ({
           </span>
         </div>
 
-        {submitLoading || !email || !password ? (
+        {submitLoading ? (
           <div className="submit-button-signin-disabled">
             <p>Se connecter</p>
           </div>

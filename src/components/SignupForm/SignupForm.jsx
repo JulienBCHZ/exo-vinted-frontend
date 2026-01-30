@@ -73,7 +73,7 @@ const SignupForm = ({
     const value = event.target.value;
     setUsername(value);
     if (value.length > 0 && value.length < 4) {
-      setUsernameError("username trop court");
+      setUsernameError("Le nom d'utilisateur choisi est trop court");
     } else {
       setUsernameError("");
     }
@@ -83,9 +83,9 @@ const SignupForm = ({
     const value = event.target.value;
     setEmail(value);
     if (value.length > 0 && value.length < 6) {
-      setEmailError("format email invalide");
+      setEmailError("Merci d'indiquer une adresse email valide");
     } else if (!value.includes("@") && value.length > 0) {
-      setEmailError("format email invalide");
+      setEmailError("Merci d'indiquer une adresse email valide");
     } else {
       setEmailError("");
     }
@@ -95,7 +95,7 @@ const SignupForm = ({
     const value = event.target.value;
     setPassword(value);
     if (value.length < 6 && value.length > 0) {
-      setPasswordError("mot de passe trop court");
+      setPasswordError("Le mot de passe choisi est trop court");
     } else {
       setPasswordError("");
     }
@@ -112,7 +112,7 @@ const SignupForm = ({
         <div className="input-fields">
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Nom d'utilisateur"
             name="username"
             value={username}
             onChange={handleChangeUsername}
@@ -148,7 +148,7 @@ const SignupForm = ({
         <div className="input-field-password">
           <input
             type={showPassword ? "text" : "password"}
-            placeholder="Password"
+            placeholder="Mot de passe"
             name="password"
             value={password}
             onChange={handleChangePassword}
@@ -187,13 +187,7 @@ const SignupForm = ({
             </p>
           </div>
         </section>
-        {submitLoading ||
-        usernameError ||
-        emailError ||
-        passwordError ||
-        !username ||
-        !email ||
-        !password ? (
+        {submitLoading ? (
           <div className="submit-button-signup-disabled">
             <p>S'inscrire</p>
           </div>
