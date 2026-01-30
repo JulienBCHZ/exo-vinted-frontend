@@ -2,8 +2,10 @@ import "./signinform.css";
 
 import axios from "axios";
 import Cookies from "js-cookie";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
+
+import { FaRegEye } from "react-icons/fa";
 
 const SigninForm = ({
   email,
@@ -14,6 +16,7 @@ const SigninForm = ({
   API_URL,
 }) => {
   const [submitLoading, setSubmitLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -58,13 +61,22 @@ const SigninForm = ({
           value={email}
           onChange={(event) => setEmail(event.target.value)}
         />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
+        <div className="signin-password-input-field">
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            name="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          <span
+            className="signin-password-eye"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            <FaRegEye />
+          </span>
+        </div>
+
         {submitLoading || !email || !password ? (
           <div className="submit-button-signin-disabled">
             <p>Se connecter</p>

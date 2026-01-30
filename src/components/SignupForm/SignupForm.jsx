@@ -2,8 +2,10 @@ import "./signupform.css";
 
 import axios from "axios";
 import Cookies from "js-cookie";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
+
+import { FaRegEye } from "react-icons/fa";
 
 const SignupForm = ({
   username,
@@ -21,6 +23,7 @@ const SignupForm = ({
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [submitLoading, setSubmitLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -137,9 +140,9 @@ const SignupForm = ({
             <div className="field-error-text"></div>
           )}
         </div>
-        <div className="input-fields">
+        <div className="input-field-password">
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             placeholder="Password"
             name="password"
             value={password}
@@ -152,6 +155,12 @@ const SignupForm = ({
           ) : (
             <div className="field-error-text"></div>
           )}
+          <span
+            className="password-eye"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            <FaRegEye />
+          </span>
         </div>
         <section className="form-checkbox">
           <div className="line-checkbox">

@@ -36,7 +36,7 @@ const PublishForm = ({
     event.preventDefault();
 
     if (!title || !price) {
-      alert("Le titre et le prix de l'annonce sont nécessaire !");
+      alert("Le titre et le prix de l'annonce sont nécessaires !");
     } else {
       const formData = new FormData();
       formData.append("title", title);
