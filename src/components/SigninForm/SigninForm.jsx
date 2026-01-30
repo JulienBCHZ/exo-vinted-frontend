@@ -61,6 +61,7 @@ const SigninForm = ({
           name="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
+          required={true}
         />
         <div className="signin-password-input-field">
           <input
@@ -69,6 +70,7 @@ const SigninForm = ({
             name="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
+            required={true}
           />
           <span
             className="signin-password-eye"

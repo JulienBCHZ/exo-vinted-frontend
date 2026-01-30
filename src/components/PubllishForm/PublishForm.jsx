@@ -95,19 +95,20 @@ const PublishForm = ({
           <label htmlFor="title">Titre :</label>
           <input
             type="text"
-            placeholder="Title"
+            placeholder="Donnez un titre à votre annonce"
             name="title"
             value={title}
             onChange={(event) => {
               setTitle(event.target.value);
             }}
+            required={true}
           />
         </div>
         <div className="description-line">
-          <label htmlFor="description">Décris ton article :</label>
+          <label htmlFor="description">Description :</label>
           <textarea
             type="text"
-            placeholder="Description"
+            placeholder="Décrivez votre article"
             name="descrition"
             value={description}
             onChange={(event) => {
@@ -121,7 +122,7 @@ const PublishForm = ({
           <label htmlFor="brand">Marque :</label>
           <input
             type="text"
-            placeholder="Marque"
+            placeholder="Indiquez la marque"
             name="brand"
             value={brand}
             onChange={(event) => {
@@ -133,7 +134,7 @@ const PublishForm = ({
           <label htmlFor="title">Taille :</label>
           <input
             type="text"
-            placeholder="Taille"
+            placeholder="Indiquez la taille"
             name="Taille"
             value={size}
             onChange={(event) => {
@@ -145,7 +146,7 @@ const PublishForm = ({
           <label htmlFor="color">Couleur :</label>
           <input
             type="text"
-            placeholder="Couleur"
+            placeholder="Indiquez la taille"
             name="color"
             value={color}
             onChange={(event) => {
@@ -157,7 +158,7 @@ const PublishForm = ({
           <label htmlFor="condition">Etat :</label>
           <input
             type="text"
-            placeholder="Etat"
+            placeholder="Indiquez l'état du produit"
             name="condition"
             value={condition}
             onChange={(event) => {
@@ -169,7 +170,7 @@ const PublishForm = ({
           <label htmlFor="city">Lieu :</label>
           <input
             type="text"
-            placeholder="Lieu"
+            placeholder="Indiquez l'endroit ou se trouve le produit"
             name="city"
             value={city}
             onChange={(event) => {
@@ -183,12 +184,13 @@ const PublishForm = ({
           <label htmlFor="price">Prix :</label>
           <input
             type="text"
-            placeholder="Prix"
+            placeholder="Proposez un prix"
             name="price"
             value={price}
             onChange={(event) => {
               setPrice(event.target.value);
             }}
+            required={true}
           />
         </div>
         <div className="exchange-checkbox">

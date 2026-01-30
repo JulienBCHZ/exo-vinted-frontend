@@ -73,7 +73,7 @@ const Header = ({ setToken, search, setSearch }) => {
           )}
           {/* {getUserToken ? "/publish" : "/signin"} */}
           <Link to="/publish">
-            <button className="selling-button">Vends tes articles</button>
+            <button className="selling-button">Vendez vos articles</button>
           </Link>
         </div>
         <div className="header-bottom-container">

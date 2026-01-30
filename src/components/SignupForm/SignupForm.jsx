@@ -116,6 +116,8 @@ const SignupForm = ({
             name="username"
             value={username}
             onChange={handleChangeUsername}
+            className={usernameError && "input-error"}
+            required={true}
           />
           {usernameError ? (
             <div className="field-error-text">
@@ -132,6 +134,8 @@ const SignupForm = ({
             name="email"
             value={email}
             onChange={handleChangeEmail}
+            className={emailError && "input-error"}
+            required={true}
           />
           {emailError ? (
             <div className="field-error-text">
@@ -148,6 +152,8 @@ const SignupForm = ({
             name="password"
             value={password}
             onChange={handleChangePassword}
+            className={passwordError && "input-error"}
+            required={true}
           />
           {passwordError ? (
             <div className="field-error-text">
