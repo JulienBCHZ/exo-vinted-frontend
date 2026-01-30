@@ -33,6 +33,8 @@ header section {
 
 .signup:hover {
   cursor: pointer;
+  background-color: #017782de;
+  color: white;
 }
 
 .signin {
@@ -47,6 +49,8 @@ header section {
 
 .signin:hover {
   cursor: pointer;
+  background-color: #017782de;
+  color: white;
 }
 
 .logout-button {
@@ -61,6 +65,7 @@ header section {
 
 .logout-button:hover {
   cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.794);
 }
 
 .search-line {
@@ -101,6 +106,7 @@ header input {
 
 .selling-button:hover {
   cursor: pointer;
+  background-color: #017782de;
 }
 
 .header-bottom-container {
