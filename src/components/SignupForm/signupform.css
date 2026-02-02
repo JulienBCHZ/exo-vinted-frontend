@@ -24,13 +24,13 @@ input::placeholder {
 
 .input-error {
   height: 50px;
-  border: red solid 2px;
   color: red;
-  /* background-color: rgba(255, 0, 0, 0.386); */
-  /* border-bottom: pink solid; */
+  background-color: rgba(255, 0, 0, 0.053);
+  border-bottom: red solid;
   outline: none;
   font-size: 16px;
-  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .submit-button-signup {
