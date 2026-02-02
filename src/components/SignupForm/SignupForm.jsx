@@ -84,8 +84,19 @@ const SignupForm = ({
     setEmail(value);
     if (value.length > 0 && value.length < 6) {
       setEmailError("Merci d'indiquer une adresse email valide");
-    } else if (!value.includes("@") && value.length > 0) {
-      setEmailError("Merci d'indiquer une adresse email valide");
+    } else if (value.length > 0) {
+      // value must contain one & only one "@"
+      let counter = 0;
+      for (let i = 0; i < value.length; i++) {
+        if (value[i] === "@") {
+          counter = counter + 1;
+        }
+      }
+      if (counter === 1) {
+        setEmailError("");
+      } else {
+        setEmailError("Merci d'indiquer une adresse email valide");
+      }
     } else {
       setEmailError("");
     }
