@@ -194,12 +194,7 @@ const PublishForm = ({
           />
         </div>
         <div className="exchange-checkbox">
-          <input
-            type="checkbox"
-            // checked={newsletter}
-            // onChange={handleCheckNewsletter}
-            className="checkbox"
-          />
+          <input type="checkbox" className="checkbox" />
           <span>Je suis intéressé(e) par les échanges</span>
         </div>
       </section>
